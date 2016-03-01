@@ -67,11 +67,21 @@
                     <color key="backgroundColor" red="0.87888711149999998" green="0.87764927950000005" blue="0.89927112210000004" alpha="1" colorSpace="calibratedRGB"/>
                     <state key="normal" title="帮助中心"/>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mpt-oB-9Nz">
+                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="L87-94-FWS">
                     <rect key="frame" x="0.0" y="505" width="414" height="187"/>
-                </imageView>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Xbc-q7-RXh">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="187"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mpt-oB-9Nz">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="187"/>
+                                </imageView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
                 <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IRp-yL-vGc">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                     <color key="barTintColor" red="0.3074630062" green="0.5179124343" blue="0.97860765709999997" alpha="1" colorSpace="calibratedRGB"/>
                     <textAttributes key="titleTextAttributes">
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

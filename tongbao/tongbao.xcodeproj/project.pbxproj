@@ -217,6 +217,64 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C2EF5D711C854F9500F6EF25 /* Pay */ = {
+			isa = PBXGroup;
+			children = (
+				DB0A59F71C843D0700C5158A /* Wallet.h */,
+				DB0A59F81C843D0700C5158A /* Wallet.m */,
+				DB0A59F91C843D0700C5158A /* Wallet.xib */,
+				DB0A598B1C84049800C5158A /* Withdraw.xib */,
+				DB0A598A1C84049800C5158A /* Withdraw.m */,
+				DB0A59891C84049800C5158A /* Withdraw.h */,
+			);
+			name = Pay;
+			sourceTree = "<group>";
+		};
+		C2EF5D721C854FB900F6EF25 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				DB0A59B61C84055100C5158A /* Info_collection.h */,
+				DB0A59B71C84055100C5158A /* Info_collection.m */,
+				DB0A59B81C84055100C5158A /* Info_collection.xib */,
+				DB0A59AD1C84053C00C5158A /* Driver_info.h */,
+				DB0A59AE1C84053C00C5158A /* Driver_info.m */,
+				DB0A59AF1C84053C00C5158A /* Driver_info.xib */,
+				DB0A5A001C84427D00C5158A /* Password_change.h */,
+				DB0A5A011C84427D00C5158A /* Password_change.m */,
+				DB0A5A021C84427D00C5158A /* Password_change.xib */,
+				DB5768041C803AF800EC7052 /* Personal.h */,
+				DB5768051C803AF800EC7052 /* Personal.m */,
+				DB5768061C803AF800EC7052 /* Personal.xib */,
+				DB0A59A41C84052800C5158A /* My_info.h */,
+				DB0A59A51C84052800C5158A /* My_info.m */,
+				DB0A59A61C84052800C5158A /* My_info.xib */,
+			);
+			name = Info;
+			sourceTree = "<group>";
+		};
+		C2EF5D731C85502700F6EF25 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				DB5767FB1C803AB700EC7052 /* Message.h */,
+				DB5767FC1C803AB700EC7052 /* Message.m */,
+				DB5767FD1C803AB700EC7052 /* Message.xib */,
+			);
+			name = Message;
+			sourceTree = "<group>";
+		};
+		C2EF5D741C85509B00F6EF25 /* Vehicle */ = {
+			isa = PBXGroup;
+			children = (
+				DB57680D1C803B0F00EC7052 /* Add_car.h */,
+				DB57680E1C803B0F00EC7052 /* Add_car.m */,
+				DB57680F1C803B0F00EC7052 /* Add_car.xib */,
+				DB0A59921C8404B800C5158A /* Vehicle_management.h */,
+				DB0A59931C8404B800C5158A /* Vehicle_management.m */,
+				DB0A59941C8404B800C5158A /* Vehicle_management.xib */,
+			);
+			name = Vehicle;
+			sourceTree = "<group>";
+		};
 		DB0A59DA1C842F2A00C5158A /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -274,7 +332,8 @@
 		DB5767BD1C80359800EC7052 /* tongbao */ = {
 			isa = PBXGroup;
 			children = (
-				DB5767F11C8035E400EC7052 /* New Group */,
+				DB0A59EE1C84351F00C5158A /* Pics */,
+				DB5767F11C8035E400EC7052 /* Classes */,
 				DB5767C11C80359800EC7052 /* AppDelegate.h */,
 				DB5767C21C80359800EC7052 /* AppDelegate.m */,
 				DB5767C41C80359800EC7052 /* ViewController.h */,
@@ -314,47 +373,20 @@
 			path = tongbaoUITests;
 			sourceTree = "<group>";
 		};
-		DB5767F11C8035E400EC7052 /* New Group */ = {
+		DB5767F11C8035E400EC7052 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				DB0A59EE1C84351F00C5158A /* Pics */,
+				C2EF5D741C85509B00F6EF25 /* Vehicle */,
+				C2EF5D731C85502700F6EF25 /* Message */,
+				C2EF5D721C854FB900F6EF25 /* Info */,
+				C2EF5D711C854F9500F6EF25 /* Pay */,
 				DB0A59ED1C84327A00C5158A /* Order */,
 				DB0A59DA1C842F2A00C5158A /* Authentication */,
-				DB5767FB1C803AB700EC7052 /* Message.h */,
-				DB5767FC1C803AB700EC7052 /* Message.m */,
-				DB5767FD1C803AB700EC7052 /* Message.xib */,
-				DB5768041C803AF800EC7052 /* Personal.h */,
-				DB5768051C803AF800EC7052 /* Personal.m */,
-				DB5768061C803AF800EC7052 /* Personal.xib */,
-				DB57680D1C803B0F00EC7052 /* Add_car.h */,
-				DB57680E1C803B0F00EC7052 /* Add_car.m */,
-				DB57680F1C803B0F00EC7052 /* Add_car.xib */,
 				DB0A59801C84045300C5158A /* First.h */,
 				DB0A59811C84045300C5158A /* First.m */,
 				DB0A59821C84045300C5158A /* First.xib */,
-				DB0A59891C84049800C5158A /* Withdraw.h */,
-				DB0A598A1C84049800C5158A /* Withdraw.m */,
-				DB0A598B1C84049800C5158A /* Withdraw.xib */,
-				DB0A59921C8404B800C5158A /* Vehicle_management.h */,
-				DB0A59931C8404B800C5158A /* Vehicle_management.m */,
-				DB0A59941C8404B800C5158A /* Vehicle_management.xib */,
-				DB0A59A41C84052800C5158A /* My_info.h */,
-				DB0A59A51C84052800C5158A /* My_info.m */,
-				DB0A59A61C84052800C5158A /* My_info.xib */,
-				DB0A59AD1C84053C00C5158A /* Driver_info.h */,
-				DB0A59AE1C84053C00C5158A /* Driver_info.m */,
-				DB0A59AF1C84053C00C5158A /* Driver_info.xib */,
-				DB0A59B61C84055100C5158A /* Info_collection.h */,
-				DB0A59B71C84055100C5158A /* Info_collection.m */,
-				DB0A59B81C84055100C5158A /* Info_collection.xib */,
-				DB0A59F71C843D0700C5158A /* Wallet.h */,
-				DB0A59F81C843D0700C5158A /* Wallet.m */,
-				DB0A59F91C843D0700C5158A /* Wallet.xib */,
-				DB0A5A001C84427D00C5158A /* Password_change.h */,
-				DB0A5A011C84427D00C5158A /* Password_change.m */,
-				DB0A5A021C84427D00C5158A /* Password_change.xib */,
 			);
-			name = "New Group";
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
