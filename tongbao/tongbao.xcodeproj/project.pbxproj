@@ -332,7 +332,8 @@
 		DB5767BD1C80359800EC7052 /* tongbao */ = {
 			isa = PBXGroup;
 			children = (
-				DB5767F11C8035E400EC7052 /* New Group */,
+				DB0A59EE1C84351F00C5158A /* Pics */,
+				DB5767F11C8035E400EC7052 /* Classes */,
 				DB5767C11C80359800EC7052 /* AppDelegate.h */,
 				DB5767C21C80359800EC7052 /* AppDelegate.m */,
 				DB5767C41C80359800EC7052 /* ViewController.h */,
@@ -372,21 +373,20 @@
 			path = tongbaoUITests;
 			sourceTree = "<group>";
 		};
-		DB5767F11C8035E400EC7052 /* New Group */ = {
+		DB5767F11C8035E400EC7052 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				C2EF5D741C85509B00F6EF25 /* Vehicle */,
 				C2EF5D731C85502700F6EF25 /* Message */,
 				C2EF5D721C854FB900F6EF25 /* Info */,
 				C2EF5D711C854F9500F6EF25 /* Pay */,
-				DB0A59EE1C84351F00C5158A /* Pics */,
 				DB0A59ED1C84327A00C5158A /* Order */,
 				DB0A59DA1C842F2A00C5158A /* Authentication */,
 				DB0A59801C84045300C5158A /* First.h */,
 				DB0A59811C84045300C5158A /* First.m */,
 				DB0A59821C84045300C5158A /* First.xib */,
 			);
-			name = "New Group";
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
