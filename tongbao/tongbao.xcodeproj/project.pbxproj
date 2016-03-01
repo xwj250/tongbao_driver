@@ -84,10 +84,7 @@
 		DB0A5A081C84427D00C5158A /* Password_change.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB0A5A021C84427D00C5158A /* Password_change.xib */; };
 		DB5767C01C80359800EC7052 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5767BF1C80359800EC7052 /* main.m */; };
 		DB5767C31C80359800EC7052 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5767C21C80359800EC7052 /* AppDelegate.m */; };
-		DB5767C61C80359800EC7052 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5767C51C80359800EC7052 /* ViewController.m */; };
-		DB5767C91C80359800EC7052 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB5767C71C80359800EC7052 /* Main.storyboard */; };
 		DB5767CB1C80359800EC7052 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB5767CA1C80359800EC7052 /* Assets.xcassets */; };
-		DB5767CE1C80359800EC7052 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB5767CC1C80359800EC7052 /* LaunchScreen.storyboard */; };
 		DB5767D91C80359800EC7052 /* tongbaoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5767D81C80359800EC7052 /* tongbaoTests.m */; };
 		DB5767E41C80359900EC7052 /* tongbaoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5767E31C80359900EC7052 /* tongbaoUITests.m */; };
 		DB5767FE1C803AB700EC7052 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5767FC1C803AB700EC7052 /* Message.m */; };
@@ -187,11 +184,7 @@
 		DB5767BF1C80359800EC7052 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DB5767C11C80359800EC7052 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DB5767C21C80359800EC7052 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		DB5767C41C80359800EC7052 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		DB5767C51C80359800EC7052 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		DB5767C81C80359800EC7052 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB5767CA1C80359800EC7052 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DB5767CD1C80359800EC7052 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB5767CF1C80359800EC7052 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB5767D41C80359800EC7052 /* tongbaoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tongbaoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB5767D81C80359800EC7052 /* tongbaoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tongbaoTests.m; sourceTree = "<group>"; };
@@ -372,11 +365,7 @@
 				DB5767F11C8035E400EC7052 /* Classes */,
 				DB5767C11C80359800EC7052 /* AppDelegate.h */,
 				DB5767C21C80359800EC7052 /* AppDelegate.m */,
-				DB5767C41C80359800EC7052 /* ViewController.h */,
-				DB5767C51C80359800EC7052 /* ViewController.m */,
-				DB5767C71C80359800EC7052 /* Main.storyboard */,
 				DB5767CA1C80359800EC7052 /* Assets.xcassets */,
-				DB5767CC1C80359800EC7052 /* LaunchScreen.storyboard */,
 				DB5767CF1C80359800EC7052 /* Info.plist */,
 				DB5767BE1C80359800EC7052 /* Supporting Files */,
 			);
@@ -532,7 +521,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB0A59FD1C843D0700C5158A /* Wallet.xib in Resources */,
-				DB5767CE1C80359800EC7052 /* LaunchScreen.storyboard in Resources */,
 				DB0A59A11C8404F100C5158A /* Authentication.xib in Resources */,
 				DB0A59C51C84056B00C5158A /* Mission.xib in Resources */,
 				DB0A59981C8404B800C5158A /* Vehicle_management.xib in Resources */,
@@ -544,7 +532,6 @@
 				DB5768131C803B0F00EC7052 /* Add_car.xib in Resources */,
 				DBA959481C857D27009CBF23 /* Order_detials.xib in Resources */,
 				DB5768011C803AB700EC7052 /* Message.xib in Resources */,
-				DB5767C91C80359800EC7052 /* Main.storyboard in Resources */,
 				DB57680A1C803AF800EC7052 /* Personal.xib in Resources */,
 				DB0A59E11C842F8900C5158A /* Man.xib in Resources */,
 				DB0A5A061C84427D00C5158A /* Password_change.xib in Resources */,
@@ -618,7 +605,6 @@
 				DBA959451C857D27009CBF23 /* Order_detials.m in Sources */,
 				DB0A59C21C84056B00C5158A /* Mission.m in Sources */,
 				DB0A59951C8404B800C5158A /* Vehicle_management.m in Sources */,
-				DB5767C61C80359800EC7052 /* ViewController.m in Sources */,
 				DB5768071C803AF800EC7052 /* Personal.m in Sources */,
 				DB0A59B01C84053C00C5158A /* Driver_info.m in Sources */,
 				DB5767C31C80359800EC7052 /* AppDelegate.m in Sources */,
@@ -705,25 +691,6 @@
 			targetProxy = DB5767E01C80359900EC7052 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		DB5767C71C80359800EC7052 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DB5767C81C80359800EC7052 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		DB5767CC1C80359800EC7052 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DB5767CD1C80359800EC7052 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		DB5767E61C80359900EC7052 /* Debug */ = {
