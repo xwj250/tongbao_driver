@@ -108,6 +108,24 @@
 		DB5768131C803B0F00EC7052 /* Add_car.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB57680F1C803B0F00EC7052 /* Add_car.xib */; };
 		DB5768141C803B0F00EC7052 /* Add_car.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB57680F1C803B0F00EC7052 /* Add_car.xib */; };
 		DB5768151C803B0F00EC7052 /* Add_car.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB57680F1C803B0F00EC7052 /* Add_car.xib */; };
+		DBA959251C857ACA009CBF23 /* Get_order.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA959231C857ACA009CBF23 /* Get_order.m */; };
+		DBA959261C857ACA009CBF23 /* Get_order.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA959231C857ACA009CBF23 /* Get_order.m */; };
+		DBA959271C857ACA009CBF23 /* Get_order.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA959231C857ACA009CBF23 /* Get_order.m */; };
+		DBA959281C857ACA009CBF23 /* Get_order.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBA959241C857ACA009CBF23 /* Get_order.xib */; };
+		DBA959291C857ACA009CBF23 /* Get_order.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBA959241C857ACA009CBF23 /* Get_order.xib */; };
+		DBA9592A1C857ACA009CBF23 /* Get_order.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBA959241C857ACA009CBF23 /* Get_order.xib */; };
+		DBA9593C1C857B3D009CBF23 /* History_order.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA9593A1C857B3D009CBF23 /* History_order.m */; };
+		DBA9593D1C857B3D009CBF23 /* History_order.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA9593A1C857B3D009CBF23 /* History_order.m */; };
+		DBA9593E1C857B3D009CBF23 /* History_order.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA9593A1C857B3D009CBF23 /* History_order.m */; };
+		DBA9593F1C857B3D009CBF23 /* History_order.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBA9593B1C857B3D009CBF23 /* History_order.xib */; };
+		DBA959401C857B3D009CBF23 /* History_order.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBA9593B1C857B3D009CBF23 /* History_order.xib */; };
+		DBA959411C857B3D009CBF23 /* History_order.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBA9593B1C857B3D009CBF23 /* History_order.xib */; };
+		DBA959451C857D27009CBF23 /* Order_detials.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA959431C857D27009CBF23 /* Order_detials.m */; };
+		DBA959461C857D27009CBF23 /* Order_detials.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA959431C857D27009CBF23 /* Order_detials.m */; };
+		DBA959471C857D27009CBF23 /* Order_detials.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA959431C857D27009CBF23 /* Order_detials.m */; };
+		DBA959481C857D27009CBF23 /* Order_detials.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBA959441C857D27009CBF23 /* Order_detials.xib */; };
+		DBA959491C857D27009CBF23 /* Order_detials.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBA959441C857D27009CBF23 /* Order_detials.xib */; };
+		DBA9594A1C857D27009CBF23 /* Order_detials.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBA959441C857D27009CBF23 /* Order_detials.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -190,6 +208,15 @@
 		DB57680D1C803B0F00EC7052 /* Add_car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Add_car.h; sourceTree = "<group>"; };
 		DB57680E1C803B0F00EC7052 /* Add_car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Add_car.m; sourceTree = "<group>"; };
 		DB57680F1C803B0F00EC7052 /* Add_car.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Add_car.xib; sourceTree = "<group>"; };
+		DBA959221C857ACA009CBF23 /* Get_order.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Get_order.h; sourceTree = "<group>"; };
+		DBA959231C857ACA009CBF23 /* Get_order.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Get_order.m; sourceTree = "<group>"; };
+		DBA959241C857ACA009CBF23 /* Get_order.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Get_order.xib; sourceTree = "<group>"; };
+		DBA959391C857B3D009CBF23 /* History_order.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = History_order.h; sourceTree = "<group>"; };
+		DBA9593A1C857B3D009CBF23 /* History_order.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = History_order.m; sourceTree = "<group>"; };
+		DBA9593B1C857B3D009CBF23 /* History_order.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = History_order.xib; sourceTree = "<group>"; };
+		DBA959421C857D27009CBF23 /* Order_detials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Order_detials.h; sourceTree = "<group>"; };
+		DBA959431C857D27009CBF23 /* Order_detials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Order_detials.m; sourceTree = "<group>"; };
+		DBA959441C857D27009CBF23 /* Order_detials.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Order_detials.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -297,6 +324,15 @@
 				DB0A59BF1C84056B00C5158A /* Mission.h */,
 				DB0A59C01C84056B00C5158A /* Mission.m */,
 				DB0A59C11C84056B00C5158A /* Mission.xib */,
+				DBA959221C857ACA009CBF23 /* Get_order.h */,
+				DBA959231C857ACA009CBF23 /* Get_order.m */,
+				DBA959241C857ACA009CBF23 /* Get_order.xib */,
+				DBA959391C857B3D009CBF23 /* History_order.h */,
+				DBA9593A1C857B3D009CBF23 /* History_order.m */,
+				DBA9593B1C857B3D009CBF23 /* History_order.xib */,
+				DBA959421C857D27009CBF23 /* Order_detials.h */,
+				DBA959431C857D27009CBF23 /* Order_detials.m */,
+				DBA959441C857D27009CBF23 /* Order_detials.xib */,
 			);
 			name = Order;
 			sourceTree = "<group>";
@@ -506,12 +542,15 @@
 				DB5767CB1C80359800EC7052 /* Assets.xcassets in Resources */,
 				DB0A59861C84045300C5158A /* First.xib in Resources */,
 				DB5768131C803B0F00EC7052 /* Add_car.xib in Resources */,
+				DBA959481C857D27009CBF23 /* Order_detials.xib in Resources */,
 				DB5768011C803AB700EC7052 /* Message.xib in Resources */,
 				DB5767C91C80359800EC7052 /* Main.storyboard in Resources */,
 				DB57680A1C803AF800EC7052 /* Personal.xib in Resources */,
 				DB0A59E11C842F8900C5158A /* Man.xib in Resources */,
 				DB0A5A061C84427D00C5158A /* Password_change.xib in Resources */,
 				DB0A598F1C84049800C5158A /* Withdraw.xib in Resources */,
+				DBA959281C857ACA009CBF23 /* Get_order.xib in Resources */,
+				DBA9593F1C857B3D009CBF23 /* History_order.xib in Resources */,
 				DB0A59EA1C842F9B00C5158A /* Car.xib in Resources */,
 				DB0A59B31C84053C00C5158A /* Driver_info.xib in Resources */,
 			);
@@ -522,10 +561,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB0A59E21C842F8900C5158A /* Man.xib in Resources */,
+				DBA959401C857B3D009CBF23 /* History_order.xib in Resources */,
 				DB5768021C803AB700EC7052 /* Message.xib in Resources */,
 				DB0A59991C8404B800C5158A /* Vehicle_management.xib in Resources */,
 				DB0A59B41C84053C00C5158A /* Driver_info.xib in Resources */,
 				DB5768141C803B0F00EC7052 /* Add_car.xib in Resources */,
+				DBA959291C857ACA009CBF23 /* Get_order.xib in Resources */,
 				DB0A59A21C8404F100C5158A /* Authentication.xib in Resources */,
 				DB0A59BD1C84055100C5158A /* Info_collection.xib in Resources */,
 				DB0A59871C84045300C5158A /* First.xib in Resources */,
@@ -536,6 +577,7 @@
 				DB0A5A071C84427D00C5158A /* Password_change.xib in Resources */,
 				DB0A59FE1C843D0700C5158A /* Wallet.xib in Resources */,
 				DB57680B1C803AF800EC7052 /* Personal.xib in Resources */,
+				DBA959491C857D27009CBF23 /* Order_detials.xib in Resources */,
 				DB0A59C61C84056B00C5158A /* Mission.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -545,10 +587,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB0A59E31C842F8900C5158A /* Man.xib in Resources */,
+				DBA959411C857B3D009CBF23 /* History_order.xib in Resources */,
 				DB5768031C803AB700EC7052 /* Message.xib in Resources */,
 				DB0A599A1C8404B800C5158A /* Vehicle_management.xib in Resources */,
 				DB0A59B51C84053C00C5158A /* Driver_info.xib in Resources */,
 				DB5768151C803B0F00EC7052 /* Add_car.xib in Resources */,
+				DBA9592A1C857ACA009CBF23 /* Get_order.xib in Resources */,
 				DB0A59A31C8404F100C5158A /* Authentication.xib in Resources */,
 				DB0A59BE1C84055100C5158A /* Info_collection.xib in Resources */,
 				DB0A59881C84045300C5158A /* First.xib in Resources */,
@@ -559,6 +603,7 @@
 				DB0A5A081C84427D00C5158A /* Password_change.xib in Resources */,
 				DB0A59FF1C843D0700C5158A /* Wallet.xib in Resources */,
 				DB57680C1C803AF800EC7052 /* Personal.xib in Resources */,
+				DBA9594A1C857D27009CBF23 /* Order_detials.xib in Resources */,
 				DB0A59C71C84056B00C5158A /* Mission.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -570,6 +615,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBA959451C857D27009CBF23 /* Order_detials.m in Sources */,
 				DB0A59C21C84056B00C5158A /* Mission.m in Sources */,
 				DB0A59951C8404B800C5158A /* Vehicle_management.m in Sources */,
 				DB5767C61C80359800EC7052 /* ViewController.m in Sources */,
@@ -577,6 +623,7 @@
 				DB0A59B01C84053C00C5158A /* Driver_info.m in Sources */,
 				DB5767C31C80359800EC7052 /* AppDelegate.m in Sources */,
 				DB0A5A031C84427D00C5158A /* Password_change.m in Sources */,
+				DBA9593C1C857B3D009CBF23 /* History_order.m in Sources */,
 				DB0A59E71C842F9B00C5158A /* Car.m in Sources */,
 				DB5767FE1C803AB700EC7052 /* Message.m in Sources */,
 				DB0A59831C84045300C5158A /* First.m in Sources */,
@@ -588,6 +635,7 @@
 				DB0A59DE1C842F8900C5158A /* Man.m in Sources */,
 				DB0A59B91C84055100C5158A /* Info_collection.m in Sources */,
 				DB0A598C1C84049800C5158A /* Withdraw.m in Sources */,
+				DBA959251C857ACA009CBF23 /* Get_order.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,6 +644,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB0A59A81C84052800C5158A /* My_info.m in Sources */,
+				DBA959261C857ACA009CBF23 /* Get_order.m in Sources */,
 				DB0A59DF1C842F8900C5158A /* Man.m in Sources */,
 				DB5768081C803AF800EC7052 /* Personal.m in Sources */,
 				DB0A598D1C84049800C5158A /* Withdraw.m in Sources */,
@@ -611,6 +660,8 @@
 				DB5768111C803B0F00EC7052 /* Add_car.m in Sources */,
 				DB0A59961C8404B800C5158A /* Vehicle_management.m in Sources */,
 				DB5767D91C80359800EC7052 /* tongbaoTests.m in Sources */,
+				DBA959461C857D27009CBF23 /* Order_detials.m in Sources */,
+				DBA9593D1C857B3D009CBF23 /* History_order.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -619,6 +670,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB0A59A91C84052800C5158A /* My_info.m in Sources */,
+				DBA959271C857ACA009CBF23 /* Get_order.m in Sources */,
 				DB0A59E01C842F8900C5158A /* Man.m in Sources */,
 				DB5768091C803AF800EC7052 /* Personal.m in Sources */,
 				DB0A598E1C84049800C5158A /* Withdraw.m in Sources */,
@@ -634,6 +686,8 @@
 				DB5768121C803B0F00EC7052 /* Add_car.m in Sources */,
 				DB0A59971C8404B800C5158A /* Vehicle_management.m in Sources */,
 				DB5767E41C80359900EC7052 /* tongbaoUITests.m in Sources */,
+				DBA959471C857D27009CBF23 /* Order_detials.m in Sources */,
+				DBA9593E1C857B3D009CBF23 /* History_order.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
