@@ -16,7 +16,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mVO-Wv-Nob">
-                    <rect key="frame" x="0.0" y="26" width="414" height="44"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
                     <color key="barTintColor" red="0.3074630062" green="0.5179124343" blue="0.97860765709999997" alpha="1" colorSpace="calibratedRGB"/>
                     <textAttributes key="titleTextAttributes">
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

@@ -5,16 +5,52 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="History_order">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Mission">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4ek-xk-Kpe">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
+                    <color key="barTintColor" red="0.3074630062" green="0.5179124343" blue="0.97860765709999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <textAttributes key="titleTextAttributes">
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </textAttributes>
+                    <items>
+                        <navigationItem title="历史订单" id="soI-ky-0RY">
+                            <barButtonItem key="leftBarButtonItem" image="return.png" id="LnE-Cf-gGv">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jYD-Sq-WhN">
+                    <rect key="frame" x="0.0" y="692" width="414" height="44"/>
+                    <items>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="q0M-lO-w24"/>
+                        <barButtonItem title="首页" id="wLC-e2-w0I"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Swk-de-ptk"/>
+                        <barButtonItem title="订单" id="Wvf-7e-0VK"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="p4d-5A-OG3"/>
+                        <barButtonItem title="我 " id="8ZC-mn-nHp"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="9dH-4b-gm8"/>
+                    </items>
+                </toolbar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="b4f-9W-w5I">
+                    <rect key="frame" x="0.0" y="65" width="414" height="627"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
         </view>
     </objects>
+    <resources>
+        <image name="return.png" width="30" height="30"/>
+    </resources>
 </document>

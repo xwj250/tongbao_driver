@@ -123,6 +123,7 @@
 		DBA959481C857D27009CBF23 /* Order_detials.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBA959441C857D27009CBF23 /* Order_detials.xib */; };
 		DBA959491C857D27009CBF23 /* Order_detials.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBA959441C857D27009CBF23 /* Order_detials.xib */; };
 		DBA9594A1C857D27009CBF23 /* Order_detials.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBA959441C857D27009CBF23 /* Order_detials.xib */; };
+		DBF8CF461C858CB10048557F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBF8CF451C858CB10048557F /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -210,6 +211,7 @@
 		DBA959421C857D27009CBF23 /* Order_detials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Order_detials.h; sourceTree = "<group>"; };
 		DBA959431C857D27009CBF23 /* Order_detials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Order_detials.m; sourceTree = "<group>"; };
 		DBA959441C857D27009CBF23 /* Order_detials.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Order_detials.xib; sourceTree = "<group>"; };
+		DBF8CF451C858CB10048557F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -375,6 +377,7 @@
 		DB5767BE1C80359800EC7052 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DBF8CF451C858CB10048557F /* Default-568h@2x.png */,
 				DB5767BF1C80359800EC7052 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -525,6 +528,7 @@
 				DB0A59C51C84056B00C5158A /* Mission.xib in Resources */,
 				DB0A59981C8404B800C5158A /* Vehicle_management.xib in Resources */,
 				DB0A59F41C8435FB00C5158A /* return.png in Resources */,
+				DBF8CF461C858CB10048557F /* Default-568h@2x.png in Resources */,
 				DB0A59BC1C84055100C5158A /* Info_collection.xib in Resources */,
 				DB0A59AA1C84052800C5158A /* My_info.xib in Resources */,
 				DB5767CB1C80359800EC7052 /* Assets.xcassets in Resources */,

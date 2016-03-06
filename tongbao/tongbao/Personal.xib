@@ -47,15 +47,13 @@
                 <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8b0-MI-2Wv">
                     <rect key="frame" x="0.0" y="692" width="414" height="44"/>
                     <items>
-                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="K5r-Br-QL6"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="aWm-e6-j1V"/>
                         <barButtonItem title="首页" id="tie-M1-bcN"/>
-                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="77V-Sb-paz"/>
-                        <barButtonItem title="附近" id="L7h-c9-3E6"/>
-                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="VWv-gz-pXR"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="JKl-Eq-EV8"/>
                         <barButtonItem title="订单" id="nPu-0j-qDH"/>
-                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="TGM-fD-Fmm"/>
-                        <barButtonItem title="我的" id="aza-jD-tCE"/>
-                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="jL1-6v-xzg"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="vho-be-9a4"/>
+                        <barButtonItem title="我 " id="aza-jD-tCE"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="jNC-O2-96V"/>
                     </items>
                 </toolbar>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tcM-i1-IFK">
