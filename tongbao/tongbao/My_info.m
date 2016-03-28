@@ -7,16 +7,26 @@
 //
 
 #import "My_info.h"
+#import "Personal.h"
 
 @interface My_info ()
 
 @end
 
 @implementation My_info
+@synthesize nicheng;
+@synthesize phonenum;
+@synthesize touxiang;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+     self.navigationController.navigationBarHidden = YES;
+    nicheng.text=@"12345";
+    phonenum.text=@"54321";
+    touxiang.image=[UIImage imageNamed:(@"test.png")];
+
     // Do any additional setup after loading the view from its nib.
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,5 +43,10 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+-(IBAction) return{
+    Personal *vc = [[Personal alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 @end

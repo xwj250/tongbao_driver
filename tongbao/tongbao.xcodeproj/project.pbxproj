@@ -82,6 +82,9 @@
 		DB0A5A061C84427D00C5158A /* Password_change.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB0A5A021C84427D00C5158A /* Password_change.xib */; };
 		DB0A5A071C84427D00C5158A /* Password_change.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB0A5A021C84427D00C5158A /* Password_change.xib */; };
 		DB0A5A081C84427D00C5158A /* Password_change.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB0A5A021C84427D00C5158A /* Password_change.xib */; };
+		DB254F051C96CA430071C510 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DB254F041C96CA430071C510 /* Default-568h@2x.png */; };
+		DB254F071C96CA490071C510 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DB254F061C96CA490071C510 /* Default@2x.png */; };
+		DB254F091C96CA500071C510 /* Default@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DB254F081C96CA500071C510 /* Default@3x.png */; };
 		DB5767C01C80359800EC7052 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5767BF1C80359800EC7052 /* main.m */; };
 		DB5767C31C80359800EC7052 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5767C21C80359800EC7052 /* AppDelegate.m */; };
 		DB5767CB1C80359800EC7052 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB5767CA1C80359800EC7052 /* Assets.xcassets */; };
@@ -123,7 +126,8 @@
 		DBA959481C857D27009CBF23 /* Order_detials.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBA959441C857D27009CBF23 /* Order_detials.xib */; };
 		DBA959491C857D27009CBF23 /* Order_detials.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBA959441C857D27009CBF23 /* Order_detials.xib */; };
 		DBA9594A1C857D27009CBF23 /* Order_detials.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBA959441C857D27009CBF23 /* Order_detials.xib */; };
-		DBF8CF461C858CB10048557F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBF8CF451C858CB10048557F /* Default-568h@2x.png */; };
+		DBB001A91C9FBFA8005F4692 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB001A81C9FBFA8005F4692 /* TestViewController.m */; };
+		DBCCF2241C9E852A003E6A23 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = DBCCF2231C9E852A003E6A23 /* test.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -181,6 +185,9 @@
 		DB0A5A001C84427D00C5158A /* Password_change.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Password_change.h; sourceTree = "<group>"; };
 		DB0A5A011C84427D00C5158A /* Password_change.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Password_change.m; sourceTree = "<group>"; };
 		DB0A5A021C84427D00C5158A /* Password_change.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Password_change.xib; sourceTree = "<group>"; };
+		DB254F041C96CA430071C510 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		DB254F061C96CA490071C510 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		DB254F081C96CA500071C510 /* Default@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@3x.png"; sourceTree = "<group>"; };
 		DB5767BB1C80359800EC7052 /* tongbao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tongbao.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB5767BF1C80359800EC7052 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DB5767C11C80359800EC7052 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -211,7 +218,9 @@
 		DBA959421C857D27009CBF23 /* Order_detials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Order_detials.h; sourceTree = "<group>"; };
 		DBA959431C857D27009CBF23 /* Order_detials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Order_detials.m; sourceTree = "<group>"; };
 		DBA959441C857D27009CBF23 /* Order_detials.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Order_detials.xib; sourceTree = "<group>"; };
-		DBF8CF451C858CB10048557F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		DBB001A71C9FBFA8005F4692 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		DBB001A81C9FBFA8005F4692 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		DBCCF2231C9E852A003E6A23 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -340,6 +349,15 @@
 			name = Pics;
 			sourceTree = "<group>";
 		};
+		DB3F89331CA91B170040C9E9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				DBB001A71C9FBFA8005F4692 /* TestViewController.h */,
+				DBB001A81C9FBFA8005F4692 /* TestViewController.m */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
 		DB5767B21C80359800EC7052 = {
 			isa = PBXGroup;
 			children = (
@@ -363,6 +381,7 @@
 		DB5767BD1C80359800EC7052 /* tongbao */ = {
 			isa = PBXGroup;
 			children = (
+				DB3F89331CA91B170040C9E9 /* Network */,
 				DB0A59EE1C84351F00C5158A /* Pics */,
 				DB5767F11C8035E400EC7052 /* Classes */,
 				DB5767C11C80359800EC7052 /* AppDelegate.h */,
@@ -377,7 +396,10 @@
 		DB5767BE1C80359800EC7052 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				DBF8CF451C858CB10048557F /* Default-568h@2x.png */,
+				DBCCF2231C9E852A003E6A23 /* test.png */,
+				DB254F081C96CA500071C510 /* Default@3x.png */,
+				DB254F061C96CA490071C510 /* Default@2x.png */,
+				DB254F041C96CA430071C510 /* Default-568h@2x.png */,
 				DB5767BF1C80359800EC7052 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -528,22 +550,25 @@
 				DB0A59C51C84056B00C5158A /* Mission.xib in Resources */,
 				DB0A59981C8404B800C5158A /* Vehicle_management.xib in Resources */,
 				DB0A59F41C8435FB00C5158A /* return.png in Resources */,
-				DBF8CF461C858CB10048557F /* Default-568h@2x.png in Resources */,
+				DB254F051C96CA430071C510 /* Default-568h@2x.png in Resources */,
 				DB0A59BC1C84055100C5158A /* Info_collection.xib in Resources */,
 				DB0A59AA1C84052800C5158A /* My_info.xib in Resources */,
 				DB5767CB1C80359800EC7052 /* Assets.xcassets in Resources */,
 				DB0A59861C84045300C5158A /* First.xib in Resources */,
 				DB5768131C803B0F00EC7052 /* Add_car.xib in Resources */,
+				DBCCF2241C9E852A003E6A23 /* test.png in Resources */,
 				DBA959481C857D27009CBF23 /* Order_detials.xib in Resources */,
 				DB5768011C803AB700EC7052 /* Message.xib in Resources */,
 				DB57680A1C803AF800EC7052 /* Personal.xib in Resources */,
 				DB0A59E11C842F8900C5158A /* Man.xib in Resources */,
 				DB0A5A061C84427D00C5158A /* Password_change.xib in Resources */,
+				DB254F071C96CA490071C510 /* Default@2x.png in Resources */,
 				DB0A598F1C84049800C5158A /* Withdraw.xib in Resources */,
 				DBA959281C857ACA009CBF23 /* Get_order.xib in Resources */,
 				DBA9593F1C857B3D009CBF23 /* History_order.xib in Resources */,
 				DB0A59EA1C842F9B00C5158A /* Car.xib in Resources */,
 				DB0A59B31C84053C00C5158A /* Driver_info.xib in Resources */,
+				DB254F091C96CA500071C510 /* Default@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -615,6 +640,7 @@
 				DB0A5A031C84427D00C5158A /* Password_change.m in Sources */,
 				DBA9593C1C857B3D009CBF23 /* History_order.m in Sources */,
 				DB0A59E71C842F9B00C5158A /* Car.m in Sources */,
+				DBB001A91C9FBFA8005F4692 /* TestViewController.m in Sources */,
 				DB5767FE1C803AB700EC7052 /* Message.m in Sources */,
 				DB0A59831C84045300C5158A /* First.m in Sources */,
 				DB5768101C803B0F00EC7052 /* Add_car.m in Sources */,

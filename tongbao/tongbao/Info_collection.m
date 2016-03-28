@@ -33,5 +33,29 @@
     // Pass the selected object to the new view controller.
 }
 */
+-(IBAction) chooseImage{
+    
+    UIActionSheet *sheet;
+    
+    // 判断是否支持相机
+    
+    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+        
+    {
+        sheet  = [[UIActionSheet alloc] initWithTitle:@"选择" delegate:self cancelButtonTitle:nil destructiveButtonTitle:@"取消" otherButtonTitles:@"拍照",@"从相册选择", nil];
+        
+    }
+    
+    else {
+        
+        sheet = [[UIActionSheet alloc] initWithTitle:@"选择" delegate:self cancelButtonTitle:nil destructiveButtonTitle:@"取消" otherButtonTitles:@"从相册选择", nil];
+        
+    }
+    
+    sheet.tag = 255;
+    
+    [sheet showInView:self.view];
+}
+
 
 @end

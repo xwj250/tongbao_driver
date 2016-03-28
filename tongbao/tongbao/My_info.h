@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface My_info : UIViewController
+@property (strong,nonatomic) IBOutlet UILabel *nicheng;
+@property (strong,nonatomic) IBOutlet UILabel *phonenum;
+@property (strong,nonatomic) IBOutlet UIImageView *touxiang;
+
+-(IBAction)   return;
 
 @end

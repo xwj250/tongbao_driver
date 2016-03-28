@@ -10,4 +10,6 @@
 
 @interface Info_collection : UIViewController
 
+-(IBAction) chooseImage;
+
 @end

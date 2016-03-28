@@ -10,4 +10,9 @@
 
 @interface Personal : UIViewController
 
+
+-(IBAction)   test1;
+-(IBAction)   wallet;
+-(IBAction)   message;
+-(IBAction)   my_info;
 @end

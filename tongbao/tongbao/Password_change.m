@@ -7,6 +7,7 @@
 //
 
 #import "Password_change.h"
+#import "TestViewController.h"
 
 @interface Password_change ()
 
@@ -22,6 +23,12 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+-(void) testServer{
+    
+    
+    TestViewController *a=[[TestViewController alloc]init];
+    [a httpPostNoSyn];
 }
 
 /*

@@ -10,4 +10,6 @@
 
 @interface First : UIViewController
 
+-(IBAction) click1;
+
 @end

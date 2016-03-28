@@ -7,6 +7,7 @@
 //
 
 #import "First.h"
+#import "Personal.h"
 
 @interface First ()
 
@@ -16,6 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    //self.navigationController.navigationBarHidden = YES;
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -33,5 +36,14 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
+-(IBAction) click1{
+    Personal *vc = [[Personal alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+
+}
+
+
 
 @end

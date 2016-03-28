@@ -7,6 +7,11 @@
 //
 
 #import "Personal.h"
+#import "First.h"
+#import "Wallet.h"
+#import "Message.h"
+#import "My_info.h"
+
 
 @interface Personal ()
 
@@ -16,6 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBarHidden = YES;
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -33,5 +39,23 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+-(IBAction) test1{
+    First *vc = [[First alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+-(IBAction) wallet{
+    Wallet *vc = [[Wallet alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+-(IBAction) message{
+    Message *vc = [[Message alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+-(IBAction) my_info{
+    My_info *vc = [[My_info alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 @end

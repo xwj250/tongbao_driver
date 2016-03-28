@@ -10,4 +10,5 @@
 
 @interface Password_change : UIViewController
 
+-(IBAction)testServer;
 @end
