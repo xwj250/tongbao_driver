@@ -8,6 +8,7 @@
 
 #import "My_info.h"
 #import "Personal.h"
+#import "AppDelegate.h"
 
 @interface My_info ()
 
@@ -21,9 +22,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
      self.navigationController.navigationBarHidden = YES;
-    nicheng.text=@"12345";
-    phonenum.text=@"54321";
+    AppDelegate *delegate=(AppDelegate*)[[UIApplication sharedApplication]delegate];
+    nicheng.text=delegate.nickName;
+    phonenum.text=delegate.phone;
+    if(!delegate.iconUrl){
     touxiang.image=[UIImage imageNamed:(@"test.png")];
+    }
+    else{
+        NSURL *url=[NSURL URLWithString:delegate.iconUrl];
+        NSData *data=[NSData dataWithContentsOfURL:url];
+        touxiang.image=[[UIImage alloc] initWithData:data];
+    }
 
     // Do any additional setup after loading the view from its nib.
     
@@ -34,15 +43,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 -(IBAction) return{
     Personal *vc = [[Personal alloc] init];

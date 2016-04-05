@@ -7,13 +7,18 @@
 //
 
 #import "Password_change.h"
-#import "TestViewController.h"
+#import "First.h"
+#import "Passwordchange_service.h"
+#import "Personal.h"
 
 @interface Password_change ()
 
 @end
 
 @implementation Password_change
+
+@synthesize old;
+@synthesize now;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -24,11 +29,13 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
--(void) testServer{
-    
-    
-    TestViewController *a=[[TestViewController alloc]init];
-    [a httpPostNoSyn];
+-(IBAction)testServer{
+    Passwordchange_service *a=[[Passwordchange_service alloc]init];
+    [a httpPostNoSyn:old second:now third:self];
+}
+-(IBAction)return_set{
+    Personal *vc = [[Personal alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 /*

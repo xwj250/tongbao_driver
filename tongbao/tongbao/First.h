@@ -11,5 +11,11 @@
 @interface First : UIViewController
 
 -(IBAction) click1;
+-(IBAction) click2;
+-(IBAction) click3;
+-(IBAction) click4;
+-(IBAction) click5;
+-(IBAction) click6;
+-(IBAction) click7;
 
 @end

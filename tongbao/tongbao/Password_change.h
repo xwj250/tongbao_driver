@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface Password_change : UIViewController
-
+@property (strong,nonatomic) IBOutlet UITextField* old;
+@property (strong,nonatomic) IBOutlet UITextField* now;
 -(IBAction)testServer;
+-(IBAction)return_set;
+
 @end

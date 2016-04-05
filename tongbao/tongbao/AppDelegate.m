@@ -8,13 +8,23 @@
 
 #import "AppDelegate.h"
 #import "First.h"
+#import "Personal.h"
+#import "Login.h"
+#import "Password_change.h"
+#import "Message.h"
 
 
 @interface AppDelegate ()
 
+
+
 @end
 
 @implementation AppDelegate
+@synthesize nickName;
+@synthesize iconUrl;
+@synthesize token;
+@synthesize phone;
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -28,7 +38,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
 
     
-    First *first = [[First alloc] init];
+   First *first = [[First alloc] init];
     UINavigationController *Nav = [[UINavigationController alloc] initWithRootViewController:first];
     self.window.rootViewController = Nav;
     [self.window makeKeyAndVisible];

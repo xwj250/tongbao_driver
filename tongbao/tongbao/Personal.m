@@ -11,6 +11,8 @@
 #import "Wallet.h"
 #import "Message.h"
 #import "My_info.h"
+#import "Message_service.h"
+#import "Password_change.h"
 
 
 @interface Personal ()
@@ -22,6 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationController.navigationBarHidden = YES;
+
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -50,12 +53,45 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 -(IBAction) message{
-    Message *vc = [[Message alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+    Message_service *a=[[Message_service alloc]init];
+    [a httpPostNoSyn:self];
 }
 -(IBAction) my_info{
     My_info *vc = [[My_info alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
+}
+-(IBAction)set{
+    Password_change *vc=[[Password_change alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+
+
+-(IBAction)showSheet{
+    UIActionSheet *actionSheet = [[UIActionSheet alloc]
+                                  initWithTitle:@"联系我们"
+                                  delegate:self
+                                  cancelButtonTitle:@"取消"
+                                  destructiveButtonTitle:@"110"
+                                  otherButtonTitles:nil];
+    actionSheet.actionSheetStyle = UIActionSheetStyleBlackOpaque;
+    [actionSheet showInView:self.view];
+}
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel://110"]];
+
+    }
+}
+- (void)actionSheetCancel:(UIActionSheet *)actionSheet{
+    
+}
+-(void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex{
+    
+}
+-(void)actionSheet:(UIActionSheet *)actionSheet willDismissWithButtonIndex:(NSInteger)buttonIndex{
+    
 }
 
 @end

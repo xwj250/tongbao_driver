@@ -9,5 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface Add_car : UIViewController
-
+@property (strong,nonatomic) IBOutlet UITextField* name;
+@property (strong,nonatomic) IBOutlet UITextField* type;
+@property (strong,nonatomic) IBOutlet UITextField* carId;
+@property (strong,nonatomic) IBOutlet UITextField* weight;
+@property (strong,nonatomic) IBOutlet UITextField* length;
+@property (strong,nonatomic) IBOutlet UITextField* phone;
+-(IBAction) enter_add;
+-(IBAction)rewrite;
 @end

@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Message : UIViewController
+@interface Message : UIViewController<UITableViewDataSource, UITableViewDelegate>
 
-@end
+@property (retain, nonatomic) IBOutlet UITableView *MyTableView;
+@property(nonatomic,retain)  NSMutableArray* aryItems;
+
+-(IBAction)return_personal;
+//-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
+
+
+@end;

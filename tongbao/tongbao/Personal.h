@@ -8,11 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Personal : UIViewController
+@interface Personal : UIViewController<UIActionSheetDelegate>
 
 
 -(IBAction)   test1;
 -(IBAction)   wallet;
 -(IBAction)   message;
 -(IBAction)   my_info;
+-(IBAction) showSheet;
+-(IBAction) set;
 @end

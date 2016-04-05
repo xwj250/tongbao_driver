@@ -7,12 +7,19 @@
 //
 
 #import "Add_car.h"
+#import "Addcar_service.h"
 
 @interface Add_car ()
 
 @end
 
 @implementation Add_car
+@synthesize name;
+@synthesize type;
+@synthesize phone;
+@synthesize weight;
+@synthesize length;
+@synthesize carId;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -23,15 +30,19 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+-(IBAction)enter_add{
+    Addcar_service *a=[[Addcar_service alloc]init];
+    [a httpPostNoSyn:carId.text second:type.text third:phone forth:self];
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
-*/
+-(IBAction)rewrite{
+    name.clearButtonMode = UITextFieldViewModeWhileEditing;
+    type.clearButtonMode = UITextFieldViewModeWhileEditing;
+    phone.clearButtonMode = UITextFieldViewModeWhileEditing;
+    weight.clearButtonMode = UITextFieldViewModeWhileEditing;
+    length.clearButtonMode = UITextFieldViewModeWhileEditing;
+    carId.clearButtonMode = UITextFieldViewModeWhileEditing;
 
+    
+}
 @end

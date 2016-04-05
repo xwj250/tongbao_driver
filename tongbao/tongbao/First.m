@@ -8,6 +8,12 @@
 
 #import "First.h"
 #import "Personal.h"
+#import "Message.h"
+#import "Mission.h"
+#import "Vehicle_management.h"
+#import "Get_order.h"
+#import "Wallet.h"
+#import "History_order.h"
 
 @interface First ()
 
@@ -43,7 +49,35 @@
     [self.navigationController pushViewController:vc animated:YES];
 
 }
-
-
+-(IBAction) click2{
+    Message *vc = [[Message alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+    
+}
+-(IBAction) click3{
+    Mission *vc = [[Mission alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+    
+}
+-(IBAction) click4{
+    Vehicle_management *vc = [[Vehicle_management alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+    
+}
+-(IBAction) click5{
+    Get_order *vc = [[Get_order alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+    
+}
+-(IBAction) click6{
+    Wallet *vc = [[Wallet alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+    
+}
+-(IBAction) click7{
+    History_order *vc = [[History_order alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+    
+}
 
 @end
