@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Vehicle_management : UIViewController
+@interface Vehicle_management : UIViewController<UITableViewDataSource, UITableViewDelegate>
+
+@property (retain, nonatomic) IBOutlet UITableView *MyTableView;
+@property(nonatomic,retain)  NSDictionary *dict;
 
 @end

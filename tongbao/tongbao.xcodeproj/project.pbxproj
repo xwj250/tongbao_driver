@@ -142,6 +142,7 @@
 		DBE9343B1CB34DF5002E305F /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBE9343A1CB34DF5002E305F /* TableViewCell.xib */; };
 		DBE9343F1CB34FF3002E305F /* detial.png in Resources */ = {isa = PBXBuildFile; fileRef = DBE9343E1CB34FF3002E305F /* detial.png */; };
 		DBE934411CB35AE8002E305F /* Addcar_srevice.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE934401CB35AE8002E305F /* Addcar_srevice.m */; };
+		DBFCA5761CB4DD5100908ABD /* Vehiclemanagement_service.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFCA5751CB4DD5100908ABD /* Vehiclemanagement_service.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -248,6 +249,8 @@
 		DBE9343E1CB34FF3002E305F /* detial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = detial.png; sourceTree = "<group>"; };
 		DBE934401CB35AE8002E305F /* Addcar_srevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Addcar_srevice.m; sourceTree = "<group>"; };
 		DBE934421CB35B0C002E305F /* Addcar_service.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Addcar_service.h; sourceTree = "<group>"; };
+		DBFCA5741CB4DD3B00908ABD /* Vehiclemanagement_service.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vehiclemanagement_service.h; sourceTree = "<group>"; };
+		DBFCA5751CB4DD5100908ABD /* Vehiclemanagement_service.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vehiclemanagement_service.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -391,6 +394,8 @@
 				DB14EB4D1CB39585003E5239 /* Message_service.m */,
 				DB14EB4F1CB39D98003E5239 /* Passwordchange_service.h */,
 				DB14EB501CB39DAC003E5239 /* Passwordchange_service.m */,
+				DBFCA5741CB4DD3B00908ABD /* Vehiclemanagement_service.h */,
+				DBFCA5751CB4DD5100908ABD /* Vehiclemanagement_service.m */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -700,6 +705,7 @@
 				DB0A59B91C84055100C5158A /* Info_collection.m in Sources */,
 				DB0A598C1C84049800C5158A /* Withdraw.m in Sources */,
 				DBA959251C857ACA009CBF23 /* Get_order.m in Sources */,
+				DBFCA5761CB4DD5100908ABD /* Vehiclemanagement_service.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
