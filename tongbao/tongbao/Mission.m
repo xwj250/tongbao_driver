@@ -14,6 +14,10 @@
 
 @implementation Mission
 
+- (IBAction)backButton:(UIBarButtonItem *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 

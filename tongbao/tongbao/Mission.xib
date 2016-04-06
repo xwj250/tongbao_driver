@@ -15,38 +15,41 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4ek-xk-Kpe">
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ek-xk-Kpe">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="65" id="wth-7q-WgQ"/>
+                    </constraints>
                     <color key="barTintColor" red="0.3074630062" green="0.5179124343" blue="0.97860765709999997" alpha="1" colorSpace="calibratedRGB"/>
                     <textAttributes key="titleTextAttributes">
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </textAttributes>
                     <items>
-                        <navigationItem title="消息" id="soI-ky-0RY">
+                        <navigationItem title="正在进行" id="soI-ky-0RY">
                             <barButtonItem key="leftBarButtonItem" image="return.png" id="LnE-Cf-gGv">
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="backButton:" destination="-1" id="T0r-uy-yxF"/>
+                                </connections>
                             </barButtonItem>
                         </navigationItem>
                     </items>
                 </navigationBar>
-                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jYD-Sq-WhN">
-                    <rect key="frame" x="0.0" y="692" width="414" height="44"/>
-                    <items>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="q0M-lO-w24"/>
-                        <barButtonItem title="首页" id="wLC-e2-w0I"/>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Swk-de-ptk"/>
-                        <barButtonItem title="订单" id="Wvf-7e-0VK"/>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="p4d-5A-OG3"/>
-                        <barButtonItem title="我 " id="8ZC-mn-nHp"/>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="9dH-4b-gm8"/>
-                    </items>
-                </toolbar>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="b4f-9W-w5I">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="b4f-9W-w5I">
                     <rect key="frame" x="0.0" y="65" width="414" height="627"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="4ek-xk-Kpe" firstAttribute="leading" secondItem="b4f-9W-w5I" secondAttribute="leading" id="JNt-cn-DXh"/>
+                <constraint firstAttribute="trailing" secondItem="4ek-xk-Kpe" secondAttribute="trailing" id="aWI-yI-3Ev"/>
+                <constraint firstAttribute="bottom" secondItem="b4f-9W-w5I" secondAttribute="bottom" constant="44" id="f5D-Uj-Wic"/>
+                <constraint firstItem="4ek-xk-Kpe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="kRt-0Q-ceT"/>
+                <constraint firstItem="4ek-xk-Kpe" firstAttribute="trailing" secondItem="b4f-9W-w5I" secondAttribute="trailing" id="lVf-cZ-fKP"/>
+                <constraint firstItem="4ek-xk-Kpe" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="mcN-vd-OYh"/>
+                <constraint firstItem="b4f-9W-w5I" firstAttribute="top" secondItem="4ek-xk-Kpe" secondAttribute="bottom" id="uyb-aX-ALS"/>
+            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
         </view>
     </objects>

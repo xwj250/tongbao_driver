@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Mission">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="History_order">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -15,42 +15,60 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4ek-xk-Kpe">
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ek-xk-Kpe">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="65" id="Rbf-G1-PRp"/>
+                    </constraints>
                     <color key="barTintColor" red="0.3074630062" green="0.5179124343" blue="0.97860765709999997" alpha="1" colorSpace="calibratedRGB"/>
                     <textAttributes key="titleTextAttributes">
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </textAttributes>
                     <items>
-                        <navigationItem title="历史订单" id="soI-ky-0RY">
-                            <barButtonItem key="leftBarButtonItem" image="return.png" id="LnE-Cf-gGv">
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </barButtonItem>
-                        </navigationItem>
+                        <navigationItem title="历史订单" id="soI-ky-0RY"/>
                     </items>
                 </navigationBar>
-                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jYD-Sq-WhN">
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jYD-Sq-WhN">
                     <rect key="frame" x="0.0" y="692" width="414" height="44"/>
                     <items>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="q0M-lO-w24"/>
-                        <barButtonItem title="首页" id="wLC-e2-w0I"/>
+                        <barButtonItem title="首页" id="wLC-e2-w0I">
+                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="firstTouch:" destination="-1" id="yN8-LV-A8e"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="Swk-de-ptk"/>
                         <barButtonItem title="订单" id="Wvf-7e-0VK"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="p4d-5A-OG3"/>
-                        <barButtonItem title="我 " id="8ZC-mn-nHp"/>
+                        <barButtonItem title="我 " id="8ZC-mn-nHp">
+                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="meTouch:" destination="-1" id="zS2-CF-Yq7"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="9dH-4b-gm8"/>
                     </items>
                 </toolbar>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="b4f-9W-w5I">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="b4f-9W-w5I">
                     <rect key="frame" x="0.0" y="65" width="414" height="627"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="4ek-xk-Kpe" firstAttribute="leading" secondItem="b4f-9W-w5I" secondAttribute="leading" id="9qV-j4-HDk"/>
+                <constraint firstItem="jYD-Sq-WhN" firstAttribute="trailing" secondItem="b4f-9W-w5I" secondAttribute="trailing" id="C5q-He-Gj4"/>
+                <constraint firstItem="4ek-xk-Kpe" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="EqU-Ga-Wpg"/>
+                <constraint firstItem="jYD-Sq-WhN" firstAttribute="leading" secondItem="b4f-9W-w5I" secondAttribute="leading" id="aUf-P0-cKL"/>
+                <constraint firstItem="4ek-xk-Kpe" firstAttribute="bottom" secondItem="b4f-9W-w5I" secondAttribute="top" id="acs-Go-onN"/>
+                <constraint firstAttribute="trailing" secondItem="4ek-xk-Kpe" secondAttribute="trailing" id="bgq-az-mtz"/>
+                <constraint firstItem="4ek-xk-Kpe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dCe-QR-WR1"/>
+                <constraint firstAttribute="bottom" secondItem="jYD-Sq-WhN" secondAttribute="bottom" id="dKC-c5-hed"/>
+                <constraint firstItem="jYD-Sq-WhN" firstAttribute="top" secondItem="b4f-9W-w5I" secondAttribute="bottom" id="pVa-MS-FfF"/>
+                <constraint firstItem="4ek-xk-Kpe" firstAttribute="trailing" secondItem="b4f-9W-w5I" secondAttribute="trailing" id="qMe-PW-ddb"/>
+            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
         </view>
     </objects>
-    <resources>
-        <image name="return.png" width="30" height="30"/>
-    </resources>
 </document>
