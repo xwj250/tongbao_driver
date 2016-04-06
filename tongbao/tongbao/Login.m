@@ -31,7 +31,7 @@
 
 -(IBAction)login{
     Login_service *a=[[Login_service alloc]init];
-    [a httpPostNoSyn:name.text second:pw.text third:0 forth:self];
+    [a httpPostNoSyn:name.text second:pw.text third:1 forth:self];
 
 }
 -(void) enter{

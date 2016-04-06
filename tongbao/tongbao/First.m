@@ -8,7 +8,7 @@
 
 #import "First.h"
 #import "Personal.h"
-#import "Message.h"
+#import "Message_service.h"
 #import "Mission.h"
 #import "Vehicle_management.h"
 #import "Get_order.h"
@@ -50,8 +50,8 @@
 
 }
 -(IBAction) click2{
-    Message *vc = [[Message alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+    Message_service *a=[[Message_service alloc]init];
+    [a httpPostNoSyn:self];
     
 }
 -(IBAction) click3{

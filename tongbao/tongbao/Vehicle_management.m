@@ -14,8 +14,13 @@
 
 @implementation Vehicle_management
 
-- (void)viewDidLoad {
+-(void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBarHidden = YES;
+    
+    [self.MyTableView setDataSource:self];
+    self.MyTableView.delegate = self;
+    
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -24,14 +29,57 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //该方法响应列表中行的点击事件
+    
+    
+   // NSString *heroSelected=[aryItems objectAtIndex:indexPath.row];
+    //indexPath.row得到选中的行号，提取出在数组中的内容。
+    //UIAlertView *myAlertView;
+   // myAlertView = [[UIAlertView alloc]initWithTitle:@"dota群英传" message:heroSelected delegate:self cancelButtonTitle:@"ok" otherButtonTitles:nil];
+   // [myAlertView show];
+    //点击后弹出该对话框。
 }
-*/
+
+
+#pragma mark -- table view delegate
+
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 50;
+}
+
+#pragma mark -- DataSource
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    //return [aryItems count];
+    return 0;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"MyTableViewCell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        NSArray *nib = [[NSBundle mainBundle]loadNibNamed:@"TableViewCell" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
+    }
+    
+    if (cell) {
+        UILabel* label = (UILabel*)[cell viewWithTag:1];
+        
+      //  NSString* item = [aryItems objectAtIndex: indexPath.row];
+        //[label setText:item];
+    }
+    
+    
+    return cell;
+}
+
+
+
 
 @end

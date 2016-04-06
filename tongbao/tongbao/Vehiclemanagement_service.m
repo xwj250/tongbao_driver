@@ -1,18 +1,19 @@
 //
-//  Message_service.m
+//  Vehiclemanagement_service.m
 //  tongbao
 //
-//  Created by 薛文进 on 16/4/5.
+//  Created by 薛文进 on 16/4/6.
 //  Copyright © 2016年 薛文进. All rights reserved.
 //
 
-#import "Message_service.h"
+#import "Vehiclemanagement_service.h"
 #import "AppDelegate.h"
-#import "Message.h"
+#import "Vehicle_management.h"
 
 
 
-@implementation Message_service;
+
+@implementation Vehiclemanagement_service;
 @synthesize receiveData=_receiveData;
 @synthesize dataPackSerialNo=_dataPackSerialNo;
 
@@ -20,9 +21,9 @@
 
 - (void)httpPostNoSyn:(UIViewController *)control{
     help=control;
-     AppDelegate *delegate=(AppDelegate*)[[UIApplication sharedApplication]delegate];
+    AppDelegate *delegate=(AppDelegate*)[[UIApplication sharedApplication]delegate];
     
-    NSString *URLString=@"http://120.27.112.9:8080/tongbao/user//auth/getMyMessages";
+    NSString *URLString=@"http://120.27.112.9:8080/tongbao/driver/auth/getTruckList";
     NSURL *URL = [NSURL URLWithString:[URLString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     NSMutableURLRequest *URLRequest=[[NSMutableURLRequest alloc] initWithURL:URL cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:60];
     
@@ -65,27 +66,11 @@
     //        NSLog(@"key :%@  value :%@", key, [dict objectForKey:key]);
     //    }
     NSLog(@"%@",[dict objectForKey:@"result"]);
-    NSMutableArray* aryItems= [[NSMutableArray alloc] initWithCapacity:0];
+    
     if([[dict objectForKey:@"result"] intValue]==1){
-        
-        @try
-        {
-        for (NSDictionary *s in [ [dict objectForKey:@"data"] allValues]) {
-            if(!([[s objectForKey:@"type"] intValue]==0)){
-                NSString* item = [NSString stringWithFormat:@"%@",[s objectForKey:@"content"] ];
-                [aryItems addObject:item];
-            }
-        }
-            
-            Message *vc = [[Message alloc] init];
-            vc.aryItems=aryItems;
-            [help.navigationController pushViewController:vc animated:YES];
-        }@catch (NSException * e) {
-            Message *vc = [[Message alloc] init];
-            vc.aryItems=[[NSArray alloc]initWithObjects:@"没有消息", nil];
-            [help.navigationController pushViewController:vc animated:YES];
-        }
-
+        Vehicle_management *vc = [[Vehicle_management alloc] init];
+        vc.dict=[dict objectForKey:@"data"];
+        [help.navigationController pushViewController:vc animated:YES];
     }
     else if([[dict objectForKey:@"result"] intValue] ==0){
         NSLog(@"wrong");
@@ -108,3 +93,4 @@
 
 
 @end
+
