@@ -68,9 +68,15 @@
     NSLog(@"%@",[dict objectForKey:@"result"]);
     
     if([[dict objectForKey:@"result"] intValue]==1){
+        @try{
         Vehicle_management *vc = [[Vehicle_management alloc] init];
         vc.dict=[dict objectForKey:@"data"];
         [help.navigationController pushViewController:vc animated:YES];
+        }@catch (NSException * e) {
+            Vehicle_management *vc = [[Vehicle_management alloc] init];
+            vc.aryItems=[[NSArray alloc]initWithObjects:@"没有消息", nil];
+            [help.navigationController pushViewController:vc animated:YES];
+        }
     }
     else if([[dict objectForKey:@"result"] intValue] ==0){
         NSLog(@"wrong");

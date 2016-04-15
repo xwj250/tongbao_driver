@@ -34,8 +34,7 @@
     [a httpPostNoSyn:old second:now third:self];
 }
 -(IBAction)return_set{
-    Personal *vc = [[Personal alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+     [self.navigationController popViewControllerAnimated:YES];
 }
 
 /*

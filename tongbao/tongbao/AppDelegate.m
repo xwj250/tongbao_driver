@@ -12,6 +12,7 @@
 #import "Login.h"
 #import "Password_change.h"
 #import "Message.h"
+#import "Info_collection.h"
 
 
 @interface AppDelegate ()
@@ -38,7 +39,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
 
     
-   Login *first = [[ Login alloc] init];
+   Info_collection *first = [[ Info_collection alloc] init];
     UINavigationController *Nav = [[UINavigationController alloc] initWithRootViewController:first];
     self.window.rootViewController = Nav;
     [self.window makeKeyAndVisible];

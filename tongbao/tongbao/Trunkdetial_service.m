@@ -1,33 +1,34 @@
 //
-//  Message_service.m
+//  Trunkdetial_service.m
 //  tongbao
 //
-//  Created by 薛文进 on 16/4/5.
+//  Created by 薛文进 on 16/4/10.
 //  Copyright © 2016年 薛文进. All rights reserved.
 //
 
-#import "Message_service.h"
+#import "Trunkdetial_service.h"
 #import "AppDelegate.h"
-#import "Message.h"
+#import "Delete_carinfo.h"
 
 
 
-@implementation Message_service;
+
+@implementation Trunkdetial_service;
 @synthesize receiveData=_receiveData;
 @synthesize dataPackSerialNo=_dataPackSerialNo;
 
 @synthesize help;
 
-- (void)httpPostNoSyn:(UIViewController *)control{
+- (void)httpPostNoSyn:(UIViewController *)control second:(int)num{
     help=control;
-     AppDelegate *delegate=(AppDelegate*)[[UIApplication sharedApplication]delegate];
+    AppDelegate *delegate=(AppDelegate*)[[UIApplication sharedApplication]delegate];
     
-    NSString *URLString=@"http://120.27.112.9:8080/tongbao/user/auth/getMyMessages";
+    NSString *URLString=@"http://120.27.112.9:8080/tongbao/driver/auth/getTruckDetail";
     NSURL *URL = [NSURL URLWithString:[URLString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     NSMutableURLRequest *URLRequest=[[NSMutableURLRequest alloc] initWithURL:URL cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:60];
     
     
-    NSString *param=[NSString stringWithFormat:@"token=%@",delegate.token];
+    NSString *param=[NSString stringWithFormat:@"token=%@&id=%d",delegate.token,num];
     NSData *postData=[param dataUsingEncoding:NSUTF8StringEncoding];
     [URLRequest setHTTPMethod:@"POST"];
     [URLRequest setHTTPBody:postData];
@@ -70,22 +71,21 @@
         
         @try
         {
-        for (NSDictionary *s in [ [dict objectForKey:@"data"] allValues]) {
-            if(!([[s objectForKey:@"type"] intValue]==0)){
-                NSString* item = [NSString stringWithFormat:@"%@",[s objectForKey:@"content"] ];
-                [aryItems addObject:item];
-            }
-        }
-            
-            Message *vc = [[Message alloc] init];
-            vc.aryItems=aryItems;
+            Delete_carinfo *vc = [[Delete_carinfo alloc] init];
+             vc.truck=[[dict objectForKey:@"data"] objectForKey:@"truckNum"];
+            vc.truckNum.text=[[dict objectForKey:@"data"] objectForKey:@"truckNum"];
+            vc.authState.text=[[dict objectForKey:@"data"] objectForKey:@"authState"];
+            vc.typeName.text=[[dict objectForKey:@"data"] objectForKey:@"typeName"];
+            vc.length.text=[[dict objectForKey:@"data"] objectForKey:@"length"];
+            vc.capacity.text=[[dict objectForKey:@"data"] objectForKey:@"capacity"];
+            vc.phoneNum.text=[[dict objectForKey:@"data"] objectForKey:@"phoneNum"];
+            vc.realName.text=[[dict objectForKey:@"data"] objectForKey:@"realName"];
+           //"truckNum":车牌号,"authState":审核状态(0未验证，1正在验证，2验证成功,3验证失败),"typeName":车型名称,"length":车长,"capacity":载重,"phoneNum":随车电话,"realName":车主姓名
             [help.navigationController pushViewController:vc animated:YES];
         }@catch (NSException * e) {
-            Message *vc = [[Message alloc] init];
-            vc.aryItems=[[NSArray alloc]initWithObjects:@"没有消息", nil];
-            [help.navigationController pushViewController:vc animated:YES];
+            
         }
-
+        
     }
     else if([[dict objectForKey:@"result"] intValue] ==0){
         NSLog(@"wrong");

@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Vehicle_management">
             <connections>
+                <outlet property="MyTableView" destination="Wl7-5W-emL" id="yyZ-Ih-YvI"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,8 +16,11 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mVO-Wv-Nob">
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mVO-Wv-Nob">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="65" id="ITs-W4-bSV"/>
+                    </constraints>
                     <color key="barTintColor" red="0.3074630062" green="0.5179124343" blue="0.97860765709999997" alpha="1" colorSpace="calibratedRGB"/>
                     <textAttributes key="titleTextAttributes">
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -25,6 +29,9 @@
                         <navigationItem title="车辆管理" id="3LX-bN-vQ9">
                             <barButtonItem key="leftBarButtonItem" image="return.png" id="k87-hu-p00">
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="vehicle_retun" destination="-2" id="s39-qQ-nMx"/>
+                                </connections>
                             </barButtonItem>
                             <barButtonItem key="rightBarButtonItem" title="添加车辆" id="XuM-G0-CSl">
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -32,12 +39,23 @@
                         </navigationItem>
                     </items>
                 </navigationBar>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wl7-5W-emL">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wl7-5W-emL">
                     <rect key="frame" x="0.0" y="70" width="414" height="435"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="435" id="4V2-jh-3rY"/>
+                    </constraints>
                 </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Wl7-5W-emL" firstAttribute="top" secondItem="mVO-Wv-Nob" secondAttribute="bottom" constant="5" id="Rgc-Ws-KDY"/>
+                <constraint firstItem="mVO-Wv-Nob" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="UmL-ln-0As"/>
+                <constraint firstAttribute="trailing" secondItem="mVO-Wv-Nob" secondAttribute="trailing" id="aaF-jt-iQ2"/>
+                <constraint firstItem="mVO-Wv-Nob" firstAttribute="trailing" secondItem="Wl7-5W-emL" secondAttribute="trailing" id="hXO-49-nrv"/>
+                <constraint firstItem="mVO-Wv-Nob" firstAttribute="leading" secondItem="Wl7-5W-emL" secondAttribute="leading" id="oVJ-DX-bKp"/>
+                <constraint firstItem="mVO-Wv-Nob" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="wfu-8N-UP2"/>
+            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
         </view>
     </objects>

@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Info_collection : UIViewController
+@interface Info_collection : UIViewController<UIImagePickerControllerDelegate,UIActionSheetDelegate,UINavigationControllerDelegate>
 
--(IBAction) chooseImage;
+@property (strong, nonatomic) IBOutlet UIImageView *headImage;
 
+@property (strong, nonatomic) UIActionSheet *actionSheet;
+
+- (IBAction)clickPickImage:(id)sender;
 @end
