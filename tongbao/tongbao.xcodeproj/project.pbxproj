@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C2FD36A61CC08BD400BACC23 /* ShowAllOrdersService.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FD36A51CC08BD400BACC23 /* ShowAllOrdersService.m */; };
+		C2FD36AA1CC08BEE00BACC23 /* MyOrdersService.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FD36A81CC08BEE00BACC23 /* MyOrdersService.m */; };
 		DB046AA21CAA480400011BE6 /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = DB046AA01CAA480400011BE6 /* Login.m */; };
 		DB046AA31CAA480400011BE6 /* Login.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB046AA11CAA480400011BE6 /* Login.xib */; };
 		DB0A59831C84045300C5158A /* First.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0A59811C84045300C5158A /* First.m */; };
@@ -163,6 +165,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C2FD36A51CC08BD400BACC23 /* ShowAllOrdersService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowAllOrdersService.m; sourceTree = "<group>"; };
+		C2FD36A71CC08BDF00BACC23 /* ShowAllOrdersService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowAllOrdersService.h; sourceTree = "<group>"; };
+		C2FD36A81CC08BEE00BACC23 /* MyOrdersService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyOrdersService.m; sourceTree = "<group>"; };
+		C2FD36A91CC08BEE00BACC23 /* MyOrdersService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyOrdersService.h; sourceTree = "<group>"; };
 		DB046A9F1CAA480400011BE6 /* Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Login.h; sourceTree = "<group>"; };
 		DB046AA01CAA480400011BE6 /* Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Login.m; sourceTree = "<group>"; };
 		DB046AA11CAA480400011BE6 /* Login.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Login.xib; sourceTree = "<group>"; };
@@ -384,6 +390,10 @@
 		DB3F89331CA91B170040C9E9 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				C2FD36A81CC08BEE00BACC23 /* MyOrdersService.m */,
+				C2FD36A91CC08BEE00BACC23 /* MyOrdersService.h */,
+				C2FD36A71CC08BDF00BACC23 /* ShowAllOrdersService.h */,
+				C2FD36A51CC08BD400BACC23 /* ShowAllOrdersService.m */,
 				DBB001A71C9FBFA8005F4692 /* TestViewController.h */,
 				DBB001A81C9FBFA8005F4692 /* TestViewController.m */,
 				DB3F89341CA91EEA0040C9E9 /* Login_service.h */,
@@ -682,6 +692,7 @@
 				DBA959451C857D27009CBF23 /* Order_detials.m in Sources */,
 				DB0A59C21C84056B00C5158A /* Mission.m in Sources */,
 				DBE934411CB35AE8002E305F /* Addcar_srevice.m in Sources */,
+				C2FD36A61CC08BD400BACC23 /* ShowAllOrdersService.m in Sources */,
 				DB0A59951C8404B800C5158A /* Vehicle_management.m in Sources */,
 				DB5768071C803AF800EC7052 /* Personal.m in Sources */,
 				DB0A59B01C84053C00C5158A /* Driver_info.m in Sources */,
@@ -702,6 +713,7 @@
 				DB0A59FA1C843D0700C5158A /* Wallet.m in Sources */,
 				DB0A59A71C84052800C5158A /* My_info.m in Sources */,
 				DB0A59DE1C842F8900C5158A /* Man.m in Sources */,
+				C2FD36AA1CC08BEE00BACC23 /* MyOrdersService.m in Sources */,
 				DB0A59B91C84055100C5158A /* Info_collection.m in Sources */,
 				DB0A598C1C84049800C5158A /* Withdraw.m in Sources */,
 				DBA959251C857ACA009CBF23 /* Get_order.m in Sources */,
