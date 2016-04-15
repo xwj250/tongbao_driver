@@ -5,8 +5,9 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Driver_info">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Info_collection">
             <connections>
+                <outlet property="headImage" destination="OoL-Oy-QSJ" id="vor-rw-SeZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,8 +16,11 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tyg-R9-LL1">
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tyg-R9-LL1">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="65" id="fV9-3f-Ln2"/>
+                    </constraints>
                     <color key="barTintColor" red="0.3074630062" green="0.5179124343" blue="0.97860765709999997" alpha="1" colorSpace="calibratedRGB"/>
                     <textAttributes key="titleTextAttributes">
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -29,55 +33,51 @@
                         </navigationItem>
                     </items>
                 </navigationBar>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xtp-Ka-16o">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xtp-Ka-16o">
                     <rect key="frame" x="279" y="99" width="103" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="K36-IE-2hf"/>
+                        <constraint firstAttribute="width" constant="103" id="dVn-Dp-9hB"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="15"/>
                     <state key="normal" title="拍照标准说明">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OoL-Oy-QSJ">
-                    <rect key="frame" x="66" y="180" width="100" height="100"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OoL-Oy-QSJ">
+                    <rect key="frame" x="157" y="216" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="Iq6-J6-3MD"/>
+                        <constraint firstAttribute="height" constant="100" id="hje-sv-IdV"/>
+                    </constraints>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WlW-wF-6Rl">
-                    <rect key="frame" x="254" y="180" width="100" height="100"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WRK-Eu-CQy">
-                    <rect key="frame" x="66" y="415" width="100" height="100"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D0Y-u4-DTz">
-                    <rect key="frame" x="254" y="415" width="100" height="100"/>
-                </imageView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XcG-0R-t7R">
-                    <rect key="frame" x="80" y="317" width="72" height="31"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XcG-0R-t7R">
+                    <rect key="frame" x="157" y="370" width="100" height="45"/>
                     <color key="backgroundColor" red="0.3074630062" green="0.5179124343" blue="0.97860765709999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="hkT-zo-cDL"/>
+                    </constraints>
                     <state key="normal" title="上传">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3T2-GH-9fh">
-                    <rect key="frame" x="80" y="549" width="72" height="31"/>
-                    <color key="backgroundColor" red="0.3074630062" green="0.5179124343" blue="0.97860765709999997" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" title="上传">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zd7-VX-YSn">
-                    <rect key="frame" x="268" y="317" width="72" height="31"/>
-                    <color key="backgroundColor" red="0.3074630062" green="0.5179124343" blue="0.97860765709999997" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" title="上传">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBb-ZH-Iod">
-                    <rect key="frame" x="268" y="549" width="72" height="31"/>
-                    <color key="backgroundColor" red="0.3074630062" green="0.5179124343" blue="0.97860765709999997" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" title="上传">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
+                    <connections>
+                        <action selector="clickPickImage:" destination="-2" eventType="touchUpInside" id="cPU-Ue-stN"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Xtp-Ka-16o" firstAttribute="top" secondItem="Tyg-R9-LL1" secondAttribute="bottom" constant="34" id="0Rj-ca-J5W"/>
+                <constraint firstItem="Tyg-R9-LL1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="1ps-aZ-Msg"/>
+                <constraint firstItem="Tyg-R9-LL1" firstAttribute="centerX" secondItem="XcG-0R-t7R" secondAttribute="centerX" id="Csb-oz-Azf"/>
+                <constraint firstItem="XcG-0R-t7R" firstAttribute="top" secondItem="OoL-Oy-QSJ" secondAttribute="bottom" constant="54" id="Ir4-Tb-v61"/>
+                <constraint firstItem="Tyg-R9-LL1" firstAttribute="centerX" secondItem="OoL-Oy-QSJ" secondAttribute="centerX" id="QQu-PH-Oi1"/>
+                <constraint firstAttribute="trailing" secondItem="Tyg-R9-LL1" secondAttribute="trailing" id="SI7-eR-6G1"/>
+                <constraint firstAttribute="trailing" secondItem="Xtp-Ka-16o" secondAttribute="trailing" constant="32" id="V4K-EI-mNT"/>
+                <constraint firstItem="Tyg-R9-LL1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="XVb-5v-VM7"/>
+                <constraint firstItem="OoL-Oy-QSJ" firstAttribute="leading" secondItem="XcG-0R-t7R" secondAttribute="leading" id="vIc-JF-rAw"/>
+                <constraint firstItem="OoL-Oy-QSJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="216" id="zon-XW-msx"/>
+            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
         </view>
     </objects>

@@ -23,6 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBarHidden = YES;
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -43,6 +44,10 @@
     length.clearButtonMode = UITextFieldViewModeWhileEditing;
     carId.clearButtonMode = UITextFieldViewModeWhileEditing;
 
+    
+}
+-(IBAction)addcar_return{
+ [self.navigationController popViewControllerAnimated:YES];
     
 }
 @end

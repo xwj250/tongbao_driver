@@ -17,4 +17,5 @@
 @property (strong,nonatomic) IBOutlet UITextField* phone;
 -(IBAction) enter_add;
 -(IBAction)rewrite;
+-(IBAction)addcar_return;
 @end

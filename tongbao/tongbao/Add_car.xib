@@ -31,6 +31,9 @@
                         <navigationItem title="添加车辆" id="BGt-Tw-ICz">
                             <barButtonItem key="leftBarButtonItem" image="return.png" id="MSe-DM-WOw">
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="addcar_return" destination="-2" id="JFA-PR-pnu"/>
+                                </connections>
                             </barButtonItem>
                         </navigationItem>
                     </items>

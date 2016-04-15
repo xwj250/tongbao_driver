@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationController.navigationBarHidden = YES;
-   // aryItems= [[NSArray alloc]initWithObjects:@"老牛",@"敌法",@"小Y",@"NEC",@"小小",@"白虎", nil];
+    //aryItems= [[NSArray alloc]initWithObjects:@"老牛",@"敌法",@"小Y",@"NEC",@"小小",@"白虎", nil];
     [self.MyTableView setDataSource:self];
     self.MyTableView.delegate = self;
 
@@ -45,8 +45,7 @@
 }
 
 -(IBAction)return_personal{
-    Personal *vc = [[Personal alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark -- table view delegate
