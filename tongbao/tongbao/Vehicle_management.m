@@ -8,6 +8,7 @@
 
 #import "Vehicle_management.h"
 #import "Trunkdetial_service.h"
+#import "Add_car.h"
 
 @interface Vehicle_management ()
 
@@ -19,12 +20,12 @@
 -(void)viewDidLoad {
     [super viewDidLoad];
     self.navigationController.navigationBarHidden = YES;
-//    for (NSDictionary *s in [ dict allValues]) {
-//        
-//            NSString* item = [NSString stringWithFormat:@"%@",[s objectForKey:@"truckNum"] ];
-//            [aryItems addObject:item];
-//    }
-    aryItems= [[NSArray alloc]initWithObjects:@"老牛",@"敌法",@"小Y",@"NEC",@"小小",@"白虎", nil];
+    for (NSDictionary *s in [ dict allValues]) {
+        
+            NSString* item = [NSString stringWithFormat:@"%@",[s objectForKey:@"truckNum"] ];
+            [aryItems addObject:item];
+    }
+//    aryItems= [[NSArray alloc]initWithObjects:@"老牛",@"敌法",@"小Y",@"NEC",@"小小",@"白虎", nil];
 
     [self.MyTableView setDataSource:self];
     self.MyTableView.delegate = self;
@@ -53,7 +54,11 @@
         }
     }
 }
-
+-(IBAction)add_car{
+    Add_car *vc = [[Add_car alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+    
+}
 -(IBAction)vehicle_retun{
     [self.navigationController popViewControllerAnimated:YES];
     
