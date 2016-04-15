@@ -2,8 +2,8 @@
 //  History_order.m
 //  tongbao
 //
-//  Created by 薛文进 on 16/3/1.
-//  Copyright © 2016年 薛文进. All rights reserved.
+//  Created by 夏明瑞 on 16/3/1.
+//  Copyright © 2016年 夏明瑞. All rights reserved.
 //
 
 #import "History_order.h"
@@ -16,6 +16,35 @@
 
 @implementation History_order
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return [self.array count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *TableSampleIdentifier = @"TableSampleIdentifier";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:
+                             TableSampleIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc]
+                initWithStyle:UITableViewCellStyleDefault
+                reuseIdentifier:TableSampleIdentifier];
+    }
+    
+    NSUInteger row = [indexPath row];
+    cell.textLabel.text = [self.array objectAtIndex:row];
+    return cell;
+}
+
 - (IBAction)firstTouch:(UIBarButtonItem *)sender {
     First *first = [[First alloc] init];
     [self.navigationController pushViewController:first animated:YES];
@@ -26,26 +55,5 @@
     [self.navigationController pushViewController:personal animated:YES];
 }
 
-
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

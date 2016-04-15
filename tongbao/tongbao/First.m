@@ -14,6 +14,7 @@
 #import "Get_order.h"
 #import "Wallet.h"
 #import "History_order.h"
+#import "MyOrdersService.h"
 
 @interface First ()
 
@@ -55,8 +56,10 @@
     
 }
 -(IBAction) click3{
-    Mission *vc = [[Mission alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+    //Mission *vc = [[Mission alloc] init];
+    //[self.navigationController pushViewController:vc animated:YES];
+    MyOrdersService *service = [[MyOrdersService alloc] init];
+    [service showMyOrdersForView:self type:1];
     
 }
 -(IBAction) click4{
@@ -75,8 +78,10 @@
     
 }
 -(IBAction) click7{
-    History_order *vc = [[History_order alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+    //History_order *vc = [[History_order alloc] init];
+    //[self.navigationController pushViewController:vc animated:YES];
+    MyOrdersService *service = [[MyOrdersService alloc] init];
+    [service showMyOrdersForView:self type:2];
     
 }
 

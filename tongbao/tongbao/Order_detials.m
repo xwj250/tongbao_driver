@@ -2,8 +2,8 @@
 //  Order_detials.m
 //  tongbao
 //
-//  Created by 薛文进 on 16/3/1.
-//  Copyright © 2016年 薛文进. All rights reserved.
+//  Created by 夏明瑞 on 16/3/1.
+//  Copyright © 2016年 夏明瑞. All rights reserved.
 //
 
 #import "Order_detials.h"
