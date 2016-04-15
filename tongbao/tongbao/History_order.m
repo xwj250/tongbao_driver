@@ -7,12 +7,26 @@
 //
 
 #import "History_order.h"
+#import "First.h"
+#import "Personal.h"
 
 @interface History_order ()
 
 @end
 
 @implementation History_order
+
+- (IBAction)firstTouch:(UIBarButtonItem *)sender {
+    First *first = [[First alloc] init];
+    [self.navigationController pushViewController:first animated:YES];
+}
+
+- (IBAction)meTouch:(UIBarButtonItem *)sender {
+    Personal *personal = [[Personal alloc] init];
+    [self.navigationController pushViewController:personal animated:YES];
+}
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];

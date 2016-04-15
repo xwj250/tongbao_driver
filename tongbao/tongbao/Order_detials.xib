@@ -29,18 +29,6 @@
                         </navigationItem>
                     </items>
                 </navigationBar>
-                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jYD-Sq-WhN">
-                    <rect key="frame" x="0.0" y="692" width="414" height="44"/>
-                    <items>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="q0M-lO-w24"/>
-                        <barButtonItem title="首页" id="wLC-e2-w0I"/>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Swk-de-ptk"/>
-                        <barButtonItem title="订单" id="Wvf-7e-0VK"/>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="p4d-5A-OG3"/>
-                        <barButtonItem title="我 " id="8ZC-mn-nHp"/>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="9dH-4b-gm8"/>
-                    </items>
-                </toolbar>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="订单号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNC-sR-gws">
                     <rect key="frame" x="30" y="108" width="51" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
