@@ -11,7 +11,9 @@
 @interface Message : UIViewController<UITableViewDataSource, UITableViewDelegate>
 
 @property (retain, nonatomic) IBOutlet UITableView *MyTableView;
+@property(nonatomic,retain)  NSDictionary *dict;
 @property(nonatomic,retain)  NSMutableArray* aryItems;
+@property(nonatomic,assign)int judge;
 
 -(IBAction)return_personal;
 //-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;

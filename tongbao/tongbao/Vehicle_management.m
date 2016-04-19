@@ -17,14 +17,16 @@
 @implementation Vehicle_management
 @synthesize aryItems;
 @synthesize dict;
+@synthesize judge=_judge;
 -(void)viewDidLoad {
-    [super viewDidLoad];
-    self.navigationController.navigationBarHidden = YES;
-    for (NSDictionary *s in [ dict allValues]) {
-        
-            NSString* item = [NSString stringWithFormat:@"%@",[s objectForKey:@"truckNum"] ];
-            [aryItems addObject:item];
-    }
+
+        [super viewDidLoad];
+        self.navigationController.navigationBarHidden = YES;
+            
+    
+
+   
+  
 //    aryItems= [[NSArray alloc]initWithObjects:@"老牛",@"敌法",@"小Y",@"NEC",@"小小",@"白虎", nil];
 
     [self.MyTableView setDataSource:self];
@@ -46,12 +48,14 @@
     
     NSString *heroSelected=[aryItems objectAtIndex:indexPath.row];
   //  indexPath.row得到选中的行号，提取出在数组中的内容。
-     for (NSDictionary *s in [ dict allValues]) {
+    if(self.judge==1){
+     for (NSDictionary *s in self.dict) {
         NSString* item = [NSString stringWithFormat:@"%@",[s objectForKey:@"truckNum"] ];
         if([heroSelected isEqualToString:item]){
             Trunkdetial_service *a=[[Trunkdetial_service alloc]init];
-            [a httpPostNoSyn:self second:[[dict objectForKey:@"id"] intValue]];
+            [a httpPostNoSyn:self second:[[s objectForKey:@"id"] intValue]];
         }
+    }
     }
 }
 -(IBAction)add_car{

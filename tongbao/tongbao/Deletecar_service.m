@@ -9,6 +9,7 @@
 #import "Deletecar_service.h"
 #import "AppDelegate.h"
 #import "Vehicle_management.h"
+#import "First.h"
 
 
 @implementation Deletecar_service;
@@ -66,8 +67,10 @@
     //    }
     NSLog(@"%@",[dict objectForKey:@"result"]);
     if([[dict objectForKey:@"result"] intValue]==1){
-        
-        Vehicle_management *vc = [[Vehicle_management alloc] init];
+        UIAlertView *myAlertView;
+        myAlertView = [[UIAlertView alloc]initWithTitle:@"删除结果" message:@"成功" delegate:self cancelButtonTitle:@"ok" otherButtonTitles:nil];
+        [myAlertView show];
+        First *vc = [[First alloc] init];
         [help.navigationController pushViewController:vc animated:YES];
     }
     else if([[dict objectForKey:@"result"] intValue] ==0){

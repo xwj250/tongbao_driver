@@ -97,6 +97,21 @@
 		DB254F051C96CA430071C510 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DB254F041C96CA430071C510 /* Default-568h@2x.png */; };
 		DB254F071C96CA490071C510 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DB254F061C96CA490071C510 /* Default@2x.png */; };
 		DB254F091C96CA500071C510 /* Default@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DB254F081C96CA500071C510 /* Default@3x.png */; };
+		DB343E5E1CC320B100969A2A /* Trunkdetial_service.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA099561CBA1BAE00D0094D /* Trunkdetial_service.m */; };
+		DB343E641CC325C100969A2A /* home2.png in Resources */ = {isa = PBXBuildFile; fileRef = DB343E631CC325C100969A2A /* home2.png */; };
+		DB343E6A1CC3295700969A2A /* home1.png in Resources */ = {isa = PBXBuildFile; fileRef = DB343E651CC3295700969A2A /* home1.png */; };
+		DB343E6B1CC3295700969A2A /* me1.png in Resources */ = {isa = PBXBuildFile; fileRef = DB343E661CC3295700969A2A /* me1.png */; };
+		DB343E6C1CC3295700969A2A /* me2.png in Resources */ = {isa = PBXBuildFile; fileRef = DB343E671CC3295700969A2A /* me2.png */; };
+		DB343E6D1CC3295700969A2A /* order1.png in Resources */ = {isa = PBXBuildFile; fileRef = DB343E681CC3295700969A2A /* order1.png */; };
+		DB343E6E1CC3295700969A2A /* order2.png in Resources */ = {isa = PBXBuildFile; fileRef = DB343E691CC3295700969A2A /* order2.png */; };
+		DB343E721CC32CD500969A2A /* message.png in Resources */ = {isa = PBXBuildFile; fileRef = DB343E711CC32CD500969A2A /* message.png */; };
+		DB343E781CC32E6000969A2A /* authen.png in Resources */ = {isa = PBXBuildFile; fileRef = DB343E731CC32E6000969A2A /* authen.png */; };
+		DB343E7A1CC32E6000969A2A /* getorder.png in Resources */ = {isa = PBXBuildFile; fileRef = DB343E751CC32E6000969A2A /* getorder.png */; };
+		DB343E7B1CC32E6000969A2A /* task.png in Resources */ = {isa = PBXBuildFile; fileRef = DB343E761CC32E6000969A2A /* task.png */; };
+		DB343E7C1CC32E6000969A2A /* wallet.png in Resources */ = {isa = PBXBuildFile; fileRef = DB343E771CC32E6000969A2A /* wallet.png */; };
+		DB343E801CC3303100969A2A /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DB343E7F1CC3303100969A2A /* logo.png */; };
+		DB343E821CC3311300969A2A /* carmanage.png in Resources */ = {isa = PBXBuildFile; fileRef = DB343E811CC3311300969A2A /* carmanage.png */; };
+		DB343E851CC3657D00969A2A /* Postpic_service.m in Sources */ = {isa = PBXBuildFile; fileRef = DB343E841CC3657D00969A2A /* Postpic_service.m */; };
 		DB3F89361CA91F040040C9E9 /* Login_service.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3F89351CA91F040040C9E9 /* Login_service.m */; };
 		DB5767C01C80359800EC7052 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5767BF1C80359800EC7052 /* main.m */; };
 		DB5767C31C80359800EC7052 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5767C21C80359800EC7052 /* AppDelegate.m */; };
@@ -121,7 +136,6 @@
 		DB5768131C803B0F00EC7052 /* Add_car.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB57680F1C803B0F00EC7052 /* Add_car.xib */; };
 		DB5768141C803B0F00EC7052 /* Add_car.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB57680F1C803B0F00EC7052 /* Add_car.xib */; };
 		DB5768151C803B0F00EC7052 /* Add_car.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB57680F1C803B0F00EC7052 /* Add_car.xib */; };
-		DBA099571CBA1BAE00D0094D /* Trunkdetial_service.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA099561CBA1BAE00D0094D /* Trunkdetial_service.m */; };
 		DBA0995B1CBA1DA800D0094D /* Delete_carinfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA099591CBA1DA800D0094D /* Delete_carinfo.m */; };
 		DBA0995C1CBA1DA800D0094D /* Delete_carinfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBA0995A1CBA1DA800D0094D /* Delete_carinfo.xib */; };
 		DBA0995F1CBA27B800D0094D /* Deletecar_service.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA0995E1CBA27B800D0094D /* Deletecar_service.m */; };
@@ -222,6 +236,21 @@
 		DB254F041C96CA430071C510 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		DB254F061C96CA490071C510 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		DB254F081C96CA500071C510 /* Default@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@3x.png"; sourceTree = "<group>"; };
+		DB343E631CC325C100969A2A /* home2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home2.png; sourceTree = "<group>"; };
+		DB343E651CC3295700969A2A /* home1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home1.png; sourceTree = "<group>"; };
+		DB343E661CC3295700969A2A /* me1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = me1.png; sourceTree = "<group>"; };
+		DB343E671CC3295700969A2A /* me2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = me2.png; sourceTree = "<group>"; };
+		DB343E681CC3295700969A2A /* order1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = order1.png; sourceTree = "<group>"; };
+		DB343E691CC3295700969A2A /* order2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = order2.png; sourceTree = "<group>"; };
+		DB343E711CC32CD500969A2A /* message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = message.png; sourceTree = "<group>"; };
+		DB343E731CC32E6000969A2A /* authen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = authen.png; sourceTree = "<group>"; };
+		DB343E751CC32E6000969A2A /* getorder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getorder.png; sourceTree = "<group>"; };
+		DB343E761CC32E6000969A2A /* task.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = task.png; sourceTree = "<group>"; };
+		DB343E771CC32E6000969A2A /* wallet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wallet.png; sourceTree = "<group>"; };
+		DB343E7F1CC3303100969A2A /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		DB343E811CC3311300969A2A /* carmanage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carmanage.png; sourceTree = "<group>"; };
+		DB343E831CC3657D00969A2A /* Postpic_service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Postpic_service.h; sourceTree = "<group>"; };
+		DB343E841CC3657D00969A2A /* Postpic_service.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Postpic_service.m; sourceTree = "<group>"; };
 		DB3F89341CA91EEA0040C9E9 /* Login_service.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Login_service.h; sourceTree = "<group>"; };
 		DB3F89351CA91F040040C9E9 /* Login_service.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Login_service.m; sourceTree = "<group>"; };
 		DB5767BB1C80359800EC7052 /* tongbao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tongbao.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -400,6 +429,19 @@
 		DB0A59EE1C84351F00C5158A /* Pics */ = {
 			isa = PBXGroup;
 			children = (
+				DB343E811CC3311300969A2A /* carmanage.png */,
+				DB343E7F1CC3303100969A2A /* logo.png */,
+				DB343E731CC32E6000969A2A /* authen.png */,
+				DB343E751CC32E6000969A2A /* getorder.png */,
+				DB343E761CC32E6000969A2A /* task.png */,
+				DB343E771CC32E6000969A2A /* wallet.png */,
+				DB343E711CC32CD500969A2A /* message.png */,
+				DB343E651CC3295700969A2A /* home1.png */,
+				DB343E661CC3295700969A2A /* me1.png */,
+				DB343E671CC3295700969A2A /* me2.png */,
+				DB343E681CC3295700969A2A /* order1.png */,
+				DB343E691CC3295700969A2A /* order2.png */,
+				DB343E631CC325C100969A2A /* home2.png */,
 				DBA099661CBA309C00D0094D /* delete.png */,
 				DBA099641CBA308C00D0094D /* detial.png */,
 				DB0A59F31C8435FB00C5158A /* return.png */,
@@ -430,6 +472,8 @@
 				DBA099561CBA1BAE00D0094D /* Trunkdetial_service.m */,
 				DBA0995D1CBA27B800D0094D /* Deletecar_service.h */,
 				DBA0995E1CBA27B800D0094D /* Deletecar_service.m */,
+				DB343E831CC3657D00969A2A /* Postpic_service.h */,
+				DB343E841CC3657D00969A2A /* Postpic_service.m */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -630,6 +674,7 @@
 				DB0A59981C8404B800C5158A /* Vehicle_management.xib in Resources */,
 				DB0A59F41C8435FB00C5158A /* return.png in Resources */,
 				DB254F051C96CA430071C510 /* Default-568h@2x.png in Resources */,
+				DB343E7B1CC32E6000969A2A /* task.png in Resources */,
 				DB0A59BC1C84055100C5158A /* Info_collection.xib in Resources */,
 				DB0A59AA1C84052800C5158A /* My_info.xib in Resources */,
 				DB5767CB1C80359800EC7052 /* Assets.xcassets in Resources */,
@@ -637,19 +682,31 @@
 				DBA0995C1CBA1DA800D0094D /* Delete_carinfo.xib in Resources */,
 				DB5768131C803B0F00EC7052 /* Add_car.xib in Resources */,
 				DBCCF2241C9E852A003E6A23 /* test.png in Resources */,
+				DB343E6D1CC3295700969A2A /* order1.png in Resources */,
 				DBA959481C857D27009CBF23 /* Order_detials.xib in Resources */,
+				DB343E721CC32CD500969A2A /* message.png in Resources */,
 				DB5768011C803AB700EC7052 /* Message.xib in Resources */,
 				DB57680A1C803AF800EC7052 /* Personal.xib in Resources */,
 				DBA099691CBA33CE00D0094D /* TableView_car.xib in Resources */,
 				DB0A59E11C842F8900C5158A /* Man.xib in Resources */,
+				DB343E7C1CC32E6000969A2A /* wallet.png in Resources */,
+				DB343E781CC32E6000969A2A /* authen.png in Resources */,
+				DB343E6E1CC3295700969A2A /* order2.png in Resources */,
+				DB343E641CC325C100969A2A /* home2.png in Resources */,
 				DBA099671CBA309C00D0094D /* delete.png in Resources */,
 				DB0A5A061C84427D00C5158A /* Password_change.xib in Resources */,
+				DB343E6B1CC3295700969A2A /* me1.png in Resources */,
 				DBE9343B1CB34DF5002E305F /* TableViewCell.xib in Resources */,
+				DB343E801CC3303100969A2A /* logo.png in Resources */,
+				DB343E6A1CC3295700969A2A /* home1.png in Resources */,
+				DB343E821CC3311300969A2A /* carmanage.png in Resources */,
+				DB343E6C1CC3295700969A2A /* me2.png in Resources */,
 				DB254F071C96CA490071C510 /* Default@2x.png in Resources */,
 				DB0A598F1C84049800C5158A /* Withdraw.xib in Resources */,
 				DBA099651CBA308C00D0094D /* detial.png in Resources */,
 				DBA959281C857ACA009CBF23 /* Get_order.xib in Resources */,
 				DBA9593F1C857B3D009CBF23 /* History_order.xib in Resources */,
+				DB343E7A1CC32E6000969A2A /* getorder.png in Resources */,
 				DB0A59EA1C842F9B00C5158A /* Car.xib in Resources */,
 				DB0A59B31C84053C00C5158A /* Driver_info.xib in Resources */,
 				DB254F091C96CA500071C510 /* Default@3x.png in Resources */,
@@ -716,6 +773,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB343E5E1CC320B100969A2A /* Trunkdetial_service.m in Sources */,
 				DBA959451C857D27009CBF23 /* Order_detials.m in Sources */,
 				DB0A59C21C84056B00C5158A /* Mission.m in Sources */,
 				DBE934411CB35AE8002E305F /* Addcar_srevice.m in Sources */,
@@ -742,6 +800,7 @@
 				DB0A59A71C84052800C5158A /* My_info.m in Sources */,
 				DB0A59DE1C842F8900C5158A /* Man.m in Sources */,
 				C2FD36AA1CC08BEE00BACC23 /* MyOrdersService.m in Sources */,
+				DB343E851CC3657D00969A2A /* Postpic_service.m in Sources */,
 				DB0A59B91C84055100C5158A /* Info_collection.m in Sources */,
 				DB0A598C1C84049800C5158A /* Withdraw.m in Sources */,
 				DBA0995B1CBA1DA800D0094D /* Delete_carinfo.m in Sources */,

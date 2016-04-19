@@ -15,6 +15,7 @@
 #import "Wallet.h"
 #import "History_order.h"
 #import "MyOrdersService.h"
+#import "Vehiclemanagement_service.h"
 
 @interface First ()
 
@@ -63,8 +64,8 @@
     
 }
 -(IBAction) click4{
-    Vehicle_management *vc = [[Vehicle_management alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+   Vehiclemanagement_service *a=[[Vehiclemanagement_service alloc]init];
+    [a httpPostNoSyn:self];
     
 }
 -(IBAction) click5{

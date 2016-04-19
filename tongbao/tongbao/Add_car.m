@@ -33,8 +33,11 @@
 }
 -(IBAction)enter_add{
     Addcar_service *a=[[Addcar_service alloc]init];
-    [a httpPostNoSyn:carId.text second:type.text third:phone forth:self];
+    NSLog(@"%@",carId.text);
+     NSLog(@"%@",phone.text);
 
+    [a httpPostNoSyn:carId.text second:0 third:phone.text forth:self];
+//type.text.integerValue
 }
 -(IBAction)rewrite{
     name.clearButtonMode = UITextFieldViewModeWhileEditing;

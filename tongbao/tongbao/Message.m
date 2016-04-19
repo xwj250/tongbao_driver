@@ -15,6 +15,8 @@
 
 @implementation Message
 @synthesize aryItems;
+@synthesize dict;
+@synthesize judge=_judge;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -39,7 +41,7 @@
     NSString *heroSelected=[aryItems objectAtIndex:indexPath.row];
     //indexPath.row得到选中的行号，提取出在数组中的内容。
     UIAlertView *myAlertView;
-    myAlertView = [[UIAlertView alloc]initWithTitle:@"dota群英传" message:heroSelected delegate:self cancelButtonTitle:@"ok" otherButtonTitles:nil];
+    myAlertView = [[UIAlertView alloc]initWithTitle:@"具体内容" message:heroSelected delegate:self cancelButtonTitle:@"ok" otherButtonTitles:nil];
     [myAlertView show];
     //点击后弹出该对话框。
 }

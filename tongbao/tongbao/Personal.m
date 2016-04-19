@@ -13,6 +13,8 @@
 #import "My_info.h"
 #import "Message_service.h"
 #import "Password_change.h"
+#import "AppDelegate.h"
+#import "History_order.h"
 
 
 @interface Personal ()
@@ -20,11 +22,24 @@
 @end
 
 @implementation Personal
+@synthesize nicheng;
+@synthesize phonenum;
+@synthesize touxiang;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationController.navigationBarHidden = YES;
-
+    AppDelegate *delegate=(AppDelegate*)[[UIApplication sharedApplication]delegate];
+    nicheng.text=delegate.nickName;
+    phonenum.text=delegate.phone;
+    if(!delegate.iconUrl){
+        touxiang.image=[UIImage imageNamed:(@"test.png")];
+    }
+    else{
+        NSURL *url=[NSURL URLWithString:delegate.iconUrl];
+        NSData *data=[NSData dataWithContentsOfURL:url];
+        touxiang.image=[[UIImage alloc] initWithData:data];
+    }
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -42,7 +57,10 @@
     // Pass the selected object to the new view controller.
 }
 */
-
+-(IBAction) toorder{
+    History_order *vc = [[History_order alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 -(IBAction) test1{
     First *vc = [[First alloc] init];
     [self.navigationController pushViewController:vc animated:YES];

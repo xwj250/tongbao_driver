@@ -22,7 +22,7 @@
                     </label>
                     <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kwc-c9-ZtN">
                         <rect key="frame" x="282" y="5" width="30" height="30"/>
-                        <state key="normal" image="delete.png"/>
+                        <state key="normal" image="detial.png"/>
                     </button>
                 </subviews>
             </tableViewCellContentView>
@@ -30,6 +30,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="delete.png" width="30" height="30"/>
+        <image name="detial.png" width="30" height="30"/>
     </resources>
 </document>

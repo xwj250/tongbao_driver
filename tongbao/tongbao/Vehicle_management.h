@@ -13,7 +13,7 @@
 @property (retain, nonatomic) IBOutlet UITableView *MyTableView;
 @property(nonatomic,retain)  NSDictionary *dict;
 @property(nonatomic,retain)  NSMutableArray* aryItems;
-
+@property(nonatomic,assign)int judge;
 
 -(IBAction)vehicle_retun;
 -(IBAction)add_car;
