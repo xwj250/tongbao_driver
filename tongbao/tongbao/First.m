@@ -64,8 +64,8 @@
     
 }
 -(IBAction) click4{
-    Vehicle_management *vc = [[Vehicle_management alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+   Vehiclemanagement_service *a=[[Vehiclemanagement_service alloc]init];
+    [a httpPostNoSyn:self];
     
 }
 -(IBAction) click5{

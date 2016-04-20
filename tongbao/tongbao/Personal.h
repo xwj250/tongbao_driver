@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface Personal : UIViewController<UIActionSheetDelegate>
-
+@property (strong,nonatomic) IBOutlet UILabel *nicheng;
+@property (strong,nonatomic) IBOutlet UILabel *phonenum;
+@property (strong,nonatomic) IBOutlet UIImageView *touxiang;
 
 -(IBAction)   test1;
 -(IBAction)   wallet;
@@ -17,4 +19,5 @@
 -(IBAction)   my_info;
 -(IBAction) showSheet;
 -(IBAction) set;
+-(IBAction)toorder;
 @end

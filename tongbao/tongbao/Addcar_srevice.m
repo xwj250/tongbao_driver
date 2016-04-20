@@ -73,10 +73,8 @@
         [help.navigationController pushViewController:vc animated:YES];
     }
     else if([[dict objectForKey:@"result"] intValue] ==0){
-        NSLog(@"wrong");
+        NSLog(@"%@",[dict objectForKey:@"errorMsg"]);
         
-//        First *vc = [[First alloc] init];
-//        [help.navigationController pushViewController:vc animated:YES];
         UIAlertView *myAlertView;
         myAlertView = [[UIAlertView alloc]initWithTitle:@"添加结果" message:@"失败" delegate:self cancelButtonTitle:@"ok" otherButtonTitles:nil];
         [myAlertView show];

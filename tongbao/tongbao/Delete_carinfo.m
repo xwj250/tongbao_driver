@@ -16,17 +16,44 @@
 @implementation Delete_carinfo
 @synthesize truck;
 
-@synthesize truckNum;
-@synthesize authState;
-@synthesize typeName;
-@synthesize length;
-@synthesize capacity;
-@synthesize phoneNum;
-@synthesize realName;
+@synthesize truckNum=_truckNum;
+@synthesize authState=_authState;
+@synthesize typeName=_typeName;
+@synthesize length=_length;
+@synthesize capacity=_capacity;
+@synthesize phoneNum=_phoneNum;
+@synthesize realName=_realName;
+@synthesize a=_a;
+@synthesize b=_b;
+@synthesize c=_c;
+@synthesize d=_d;
+@synthesize e=_e;
+@synthesize f=_f;
+@synthesize g=_g;
 // truckNum":车牌号,"authState":审核状态(0未验证，1正在验证，2验证成功,3验证失败),"typeName":车型名称,"length":车长,"capacity":载重,"phoneNum":随车电话,"realName":车主姓名
 - (void)viewDidLoad {
-    self.navigationController.navigationBarHidden = YES;
     [super viewDidLoad];
+    self.navigationController.navigationBarHidden = YES;
+    self.truckNum.text=self.a;
+    if([self.b isEqualToString:@"0"]){
+      self.authState.text=@"未验证";
+    }
+    
+    else if ([self.b isEqualToString:@"1"]){
+        self.authState.text=@"正在验证";
+    }
+    else if ([self.b isEqualToString:@"2"]){
+        self.authState.text=@"验证成功";
+    }
+    else if ([self.b isEqualToString:@"3"]){
+        self.authState.text=@"验证失败";
+    }
+    
+    self.typeName.text=self.c;
+    self.length.text=self.d;
+    self.capacity.text=self.e;
+    self.phoneNum.text=self.f;
+    self.realName.text=self.g;
     // Do any additional setup after loading the view from its nib.
 }
 

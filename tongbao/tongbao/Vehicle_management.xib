@@ -35,6 +35,9 @@
                             </barButtonItem>
                             <barButtonItem key="rightBarButtonItem" title="添加车辆" id="XuM-G0-CSl">
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="add_car" destination="-2" id="uEd-qb-h3H"/>
+                                </connections>
                             </barButtonItem>
                         </navigationItem>
                     </items>

@@ -6,8 +6,9 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Message">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Personal">
             <connections>
+                <outlet property="nicheng" destination="bQp-wg-FfE" id="GRD-2d-be5"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -101,28 +102,34 @@
                     <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                     <items>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="aWm-e6-j1V"/>
-                        <barButtonItem title="首页" id="tie-M1-bcN">
+                        <barButtonItem image="home1.png" id="tie-M1-bcN">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="test1" destination="-2" id="YEo-TM-T1C"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="JKl-Eq-EV8"/>
-                        <barButtonItem title="订单" id="nPu-0j-qDH"/>
+                        <barButtonItem image="order1.png" id="nPu-0j-qDH">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="toorder" destination="-2" id="lkO-Z6-0VR"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="vho-be-9a4"/>
-                        <barButtonItem title="我 " id="aza-jD-tCE"/>
+                        <barButtonItem image="me2.png" id="aza-jD-tCE"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="jNC-O2-96V"/>
                     </items>
                 </toolbar>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oqs-PH-fwa">
                     <rect key="frame" x="0.0" y="64" width="375" height="142"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="通宝  电话:110-911" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQp-wg-FfE">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="通宝  电话:110-911" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQp-wg-FfE">
                             <rect key="frame" x="181" y="21" width="185" height="100"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="test.png" translatesAutoresizingMaskIntoConstraints="NO" id="142-yO-OiF">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test.png" translatesAutoresizingMaskIntoConstraints="NO" id="142-yO-OiF">
                             <rect key="frame" x="41" y="21" width="100" height="100"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="100" id="Idm-de-6Sc"/>
@@ -172,6 +179,9 @@
         </view>
     </objects>
     <resources>
+        <image name="home1.png" width="35" height="42"/>
+        <image name="me2.png" width="35" height="42"/>
+        <image name="order1.png" width="35" height="42"/>
         <image name="test.png" width="100" height="100"/>
     </resources>
 </document>

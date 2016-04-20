@@ -1,34 +1,31 @@
 //
-//  Vehiclemanagement_service.m
+//  Postpic_service.m
 //  tongbao
 //
-//  Created by 薛文进 on 16/4/6.
+//  Created by 薛文进 on 16/4/17.
 //  Copyright © 2016年 薛文进. All rights reserved.
 //
 
-#import "Vehiclemanagement_service.h"
-#import "AppDelegate.h"
-#import "Vehicle_management.h"
+#import "Postpic_service.h"
 
 
-
-
-@implementation Vehiclemanagement_service;
+@implementation Postpic_service
 @synthesize receiveData=_receiveData;
 @synthesize dataPackSerialNo=_dataPackSerialNo;
 
 @synthesize help;
 
-- (void)httpPostNoSyn:(UIViewController *)control{
+
+- (void)httpPostNoSyn:(NSString*)num second:(UIViewController*) control{
     help=control;
-    AppDelegate *delegate=(AppDelegate*)[[UIApplication sharedApplication]delegate];
+
     
-    NSString *URLString=@"http://120.27.112.9:8080/tongbao/driver/auth/getTruckList";
+    NSString *URLString=@"http://120.27.112.9:8080/tongbao/user/uploadPicture";
     NSURL *URL = [NSURL URLWithString:[URLString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     NSMutableURLRequest *URLRequest=[[NSMutableURLRequest alloc] initWithURL:URL cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:60];
     
     
-    NSString *param=[NSString stringWithFormat:@"token=%@",delegate.token];
+    NSString *param=[NSString stringWithFormat:@"file=%@",@"1"];
     NSData *postData=[param dataUsingEncoding:NSUTF8StringEncoding];
     [URLRequest setHTTPMethod:@"POST"];
     [URLRequest setHTTPBody:postData];
@@ -66,34 +63,17 @@
     //        NSLog(@"key :%@  value :%@", key, [dict objectForKey:key]);
     //    }
     NSLog(@"%@",[dict objectForKey:@"result"]);
-    
     if([[dict objectForKey:@"result"] intValue]==1){
-        @try{
-        Vehicle_management *vc = [[Vehicle_management alloc] init];
-        vc.dict=[[NSDictionary alloc]init];
-        vc.aryItems=[[NSMutableArray alloc] init];
-            vc.dict=[dict objectForKey:@"data"];
-            for (NSDictionary *s in [dict objectForKey:@"data"]) {
-                
-                NSString* item = [NSString stringWithFormat:@"%@",[s objectForKey:@"truckNum"] ];
-                [vc.aryItems addObject:item];
-                
-            }
-            vc.judge=1;
-     [help.navigationController pushViewController:vc animated:YES];
-        }@catch (NSException * e) {
-            Vehicle_management *vc = [[Vehicle_management alloc] init];
-            vc.aryItems=[[NSArray alloc]initWithObjects:@"没有车辆", nil];
-            vc.judge=0;
-            [help.navigationController pushViewController:vc animated:YES];
-        }
+      
     }
     else if([[dict objectForKey:@"result"] intValue] ==0){
         NSLog(@"wrong");
-        UIAlertView *myAlertView;
-        myAlertView = [[UIAlertView alloc]initWithTitle:@"结果" message:@"服务器异常" delegate:self cancelButtonTitle:@"ok" otherButtonTitles:nil];
-        [myAlertView show];
         
+        //        First *vc = [[First alloc] init];
+        //        [help.navigationController pushViewController:vc animated:YES];
+        UIAlertView *myAlertView;
+        myAlertView = [[UIAlertView alloc]initWithTitle:@"上传结果" message:@"失败" delegate:self cancelButtonTitle:@"ok" otherButtonTitles:nil];
+        [myAlertView show];
         
     }
     else{NSLog(@"wrong2222");}

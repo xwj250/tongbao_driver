@@ -66,24 +66,26 @@
     //        NSLog(@"key :%@  value :%@", key, [dict objectForKey:key]);
     //    }
     NSLog(@"%@",[dict objectForKey:@"result"]);
-    NSMutableArray* aryItems= [[NSMutableArray alloc] initWithCapacity:0];
+//    NSMutableArray* aryItems= [[NSMutableArray alloc] initWithCapacity:0];
     if([[dict objectForKey:@"result"] intValue]==1){
         
         @try
         {
             Delete_carinfo *vc = [[Delete_carinfo alloc] init];
-             vc.truck=[[dict objectForKey:@"data"] objectForKey:@"truckNum"];
-            vc.truckNum.text=[[dict objectForKey:@"data"] objectForKey:@"truckNum"];
-            vc.authState.text=[[dict objectForKey:@"data"] objectForKey:@"authState"];
-            vc.typeName.text=[[dict objectForKey:@"data"] objectForKey:@"typeName"];
-            vc.length.text=[[dict objectForKey:@"data"] objectForKey:@"length"];
-            vc.capacity.text=[[dict objectForKey:@"data"] objectForKey:@"capacity"];
-            vc.phoneNum.text=[[dict objectForKey:@"data"] objectForKey:@"phoneNum"];
-            vc.realName.text=[[dict objectForKey:@"data"] objectForKey:@"realName"];
+             vc.truck=[NSString stringWithFormat:@"%@",[[dict objectForKey:@"data"] objectForKey:@"truckNum"]];
+            vc.a=[NSString stringWithFormat:@"%@",[[dict objectForKey:@"data"] objectForKey:@"truckNum"]];
+            vc.b=[NSString stringWithFormat:@"%@",[[dict objectForKey:@"data"] objectForKey:@"authState"]];
+            vc.c=[NSString stringWithFormat:@"%@",[[dict objectForKey:@"data"] objectForKey:@"typeName"]];
+            vc.d=[NSString stringWithFormat:@"%@",[[dict objectForKey:@"data"] objectForKey:@"length"]];
+            vc.e=[NSString stringWithFormat:@"%@",[[dict objectForKey:@"data"] objectForKey:@"capacity"]];
+            vc.f=[NSString stringWithFormat:@"%@",[[dict objectForKey:@"data"] objectForKey:@"phoneNum"]];
+            vc.g=[NSString stringWithFormat:@"%@",[[dict objectForKey:@"data"] objectForKey:@"realName"]];
+            
+
            //"truckNum":车牌号,"authState":审核状态(0未验证，1正在验证，2验证成功,3验证失败),"typeName":车型名称,"length":车长,"capacity":载重,"phoneNum":随车电话,"realName":车主姓名
             [help.navigationController pushViewController:vc animated:YES];
         }@catch (NSException * e) {
-            
+            NSLog(@"赋值出差");
         }
         
     }

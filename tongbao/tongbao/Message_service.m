@@ -67,22 +67,26 @@
     NSLog(@"%@",[dict objectForKey:@"result"]);
     NSMutableArray* aryItems= [[NSMutableArray alloc] initWithCapacity:0];
     if([[dict objectForKey:@"result"] intValue]==1){
-        
+         Message *vc = [[Message alloc] init];
+        vc.dict=[[NSDictionary alloc]init];
+        vc.aryItems=[[NSMutableArray alloc] init];
+        vc.dict=[dict objectForKey:@"data"];
         @try
         {
-        for (NSDictionary *s in [ [dict objectForKey:@"data"] allValues]) {
+        for (NSDictionary *s in  [dict objectForKey:@"data"]) {
             if(!([[s objectForKey:@"type"] intValue]==0)){
                 NSString* item = [NSString stringWithFormat:@"%@",[s objectForKey:@"content"] ];
                 [aryItems addObject:item];
             }
         }
             
-            Message *vc = [[Message alloc] init];
+            vc.judge=1;
             vc.aryItems=aryItems;
             [help.navigationController pushViewController:vc animated:YES];
         }@catch (NSException * e) {
             Message *vc = [[Message alloc] init];
             vc.aryItems=[[NSArray alloc]initWithObjects:@"没有消息", nil];
+            vc.judge=0;
             [help.navigationController pushViewController:vc animated:YES];
         }
 

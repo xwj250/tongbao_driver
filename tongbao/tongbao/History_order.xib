@@ -33,17 +33,17 @@
                     <rect key="frame" x="0.0" y="692" width="414" height="44"/>
                     <items>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="q0M-lO-w24"/>
-                        <barButtonItem title="首页" id="wLC-e2-w0I">
-                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <barButtonItem image="home1.png" id="wLC-e2-w0I">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="firstTouch:" destination="-1" id="yN8-LV-A8e"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="Swk-de-ptk"/>
-                        <barButtonItem title="订单" id="Wvf-7e-0VK"/>
+                        <barButtonItem image="order2.png" id="Wvf-7e-0VK"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="p4d-5A-OG3"/>
-                        <barButtonItem title="我 " id="8ZC-mn-nHp">
-                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <barButtonItem image="me1.png" id="8ZC-mn-nHp">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="meTouch:" destination="-1" id="zS2-CF-Yq7"/>
                             </connections>
@@ -76,4 +76,9 @@
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
         </view>
     </objects>
+    <resources>
+        <image name="home1.png" width="35" height="42"/>
+        <image name="me1.png" width="35" height="42"/>
+        <image name="order2.png" width="35" height="42"/>
+    </resources>
 </document>
