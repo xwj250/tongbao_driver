@@ -15,6 +15,7 @@
 #import "Wallet.h"
 #import "History_order.h"
 #import "MyOrdersService.h"
+#import "Authentication.h"
 
 @interface First ()
 
@@ -84,5 +85,11 @@
     [service showMyOrdersForView:self type:2];
     
 }
+
+- (IBAction)click8:(UIButton *)sender {
+    Authentication *vc = [[Authentication alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 
 @end

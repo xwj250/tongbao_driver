@@ -39,8 +39,8 @@
     self.window.backgroundColor = [UIColor whiteColor];
 
     
-   Info_collection *first = [[ Info_collection alloc] init];
-    UINavigationController *Nav = [[UINavigationController alloc] initWithRootViewController:first];
+    Login *login = [[ Login alloc] init];
+    UINavigationController *Nav = [[UINavigationController alloc] initWithRootViewController:login];
     self.window.rootViewController = Nav;
     [self.window makeKeyAndVisible];
     return YES;

@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface Authentication : UIViewController
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
+@property (weak, nonatomic) IBOutlet UIView *manView;
+@property (weak, nonatomic) IBOutlet UIView *carView;
 
 @end

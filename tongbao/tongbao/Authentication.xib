@@ -7,6 +7,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Authentication">
             <connections>
+                <outlet property="carView" destination="eEz-U6-6XX" id="h8J-7A-O65"/>
+                <outlet property="manView" destination="wmV-LK-9vj" id="e7i-Ji-Y1P"/>
+                <outlet property="segmentedControl" destination="4Rf-cR-4yF" id="DRO-NY-mHJ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,8 +18,11 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fj6-Od-aeS">
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fj6-Od-aeS">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="65" id="5RK-wF-G0L"/>
+                    </constraints>
                     <color key="barTintColor" red="0.3074630062" green="0.5179124343" blue="0.97860765709999997" alpha="1" colorSpace="calibratedRGB"/>
                     <textAttributes key="titleTextAttributes">
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -26,6 +32,9 @@
                             <nil key="title"/>
                             <barButtonItem key="leftBarButtonItem" title="返回" id="HWE-Zq-ha3">
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="backButton:" destination="-1" id="3Og-WD-F49"/>
+                                </connections>
                             </barButtonItem>
                             <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="4Rf-cR-4yF">
                                 <rect key="frame" x="124.5" y="28" width="165" height="30"/>
@@ -36,13 +45,159 @@
                                     <segment title="车辆认证"/>
                                 </segments>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="segmentedControlClicked:" destination="-1" eventType="valueChanged" id="loP-6H-HBe"/>
+                                </connections>
                             </segmentedControl>
                         </navigationItem>
                     </items>
                 </navigationBar>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wmV-LK-9vj" userLabel="manView">
+                    <rect key="frame" x="0.0" y="65" width="414" height="534"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="证件审核状态：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kiW-sM-Udo">
+                            <rect key="frame" x="77" y="55" width="121" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="驾驶证号：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMU-0f-Pr5">
+                            <rect key="frame" x="77" y="232" width="121" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="驾驶证" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RBF-K0-Fwe">
+                            <rect key="frame" x="77" y="358" width="121" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="是" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKG-AN-6gL" userLabel="isOkLabel1">
+                            <rect key="frame" x="257" y="55" width="121" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="车牌号：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0L-p4-IEl">
+                            <rect key="frame" x="77" y="172" width="121" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="驾驶人头像" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWs-cX-mON">
+                            <rect key="frame" x="77" y="294" width="121" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A3M-4q-QxL" userLabel="driverHeadButton">
+                            <rect key="frame" x="361" y="294" width="17" height="21"/>
+                            <state key="normal" backgroundImage="detial.png"/>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="真实姓名：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mR0-98-oWF">
+                            <rect key="frame" x="77" y="112" width="121" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qWo-Fa-NVC" userLabel="realNameTextField">
+                            <rect key="frame" x="257" y="112" width="121" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="84x-Yf-mm0" userLabel="driverLicenseButton">
+                            <rect key="frame" x="361" y="358" width="17" height="21"/>
+                            <state key="normal" backgroundImage="detial.png"/>
+                        </button>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6gB-2Q-vD7" userLabel="truckNumTextField1">
+                            <rect key="frame" x="257" y="163" width="121" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G7M-gm-iAW" userLabel="licenseNumTextField">
+                            <rect key="frame" x="257" y="223" width="121" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eEz-U6-6XX" userLabel="carView">
+                    <rect key="frame" x="0.0" y="65" width="414" height="574"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="证件审核状态：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBJ-aW-mSP">
+                            <rect key="frame" x="77" y="55" width="121" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="行驶证" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4J-k8-eJh">
+                            <rect key="frame" x="77" y="232" width="121" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="是" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Viv-kv-Is9" userLabel="isOkLabel2">
+                            <rect key="frame" x="206" y="55" width="121" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="车头照" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a51-oy-PZJ">
+                            <rect key="frame" x="77" y="172" width="121" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SDs-Se-4ct" userLabel="carHeadButton">
+                            <rect key="frame" x="293" y="172" width="17" height="21"/>
+                            <state key="normal" backgroundImage="detial.png"/>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="车牌号：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TqT-Om-1I9">
+                            <rect key="frame" x="77" y="111" width="121" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xzH-gy-bXD" userLabel="truckNumTextField2">
+                            <rect key="frame" x="206" y="107" width="104" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ie1-79-9Bh" userLabel="carLicenseButton">
+                            <rect key="frame" x="293" y="232" width="17" height="21"/>
+                            <state key="normal" backgroundImage="detial.png"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xka-ii-Bqy">
+                    <rect key="frame" x="151" y="645" width="113" height="44"/>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="提交审核">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="eEz-U6-6XX" firstAttribute="trailing" secondItem="wmV-LK-9vj" secondAttribute="trailing" id="OFA-eR-025"/>
+                <constraint firstItem="fj6-Od-aeS" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="dka-U2-0nS"/>
+                <constraint firstItem="wmV-LK-9vj" firstAttribute="centerX" secondItem="Xka-ii-Bqy" secondAttribute="centerX" id="fLs-uJ-jmT"/>
+                <constraint firstItem="wmV-LK-9vj" firstAttribute="leading" secondItem="fj6-Od-aeS" secondAttribute="leading" id="g01-q8-TON"/>
+                <constraint firstItem="Xka-ii-Bqy" firstAttribute="top" secondItem="wmV-LK-9vj" secondAttribute="bottom" constant="46" id="gqG-94-gjI"/>
+                <constraint firstItem="wmV-LK-9vj" firstAttribute="top" secondItem="fj6-Od-aeS" secondAttribute="bottom" id="ix3-Ej-nlV"/>
+                <constraint firstItem="wmV-LK-9vj" firstAttribute="trailing" secondItem="fj6-Od-aeS" secondAttribute="trailing" id="kMK-06-3Uh"/>
+                <constraint firstItem="fj6-Od-aeS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="qvb-Zx-FZu"/>
+                <constraint firstItem="fj6-Od-aeS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="uhB-64-GSq"/>
+                <constraint firstAttribute="bottom" secondItem="wmV-LK-9vj" secondAttribute="bottom" constant="137" id="xcL-RS-TFw"/>
+                <constraint firstItem="eEz-U6-6XX" firstAttribute="leading" secondItem="wmV-LK-9vj" secondAttribute="leading" id="z0r-QV-lg8"/>
+            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
         </view>
     </objects>
+    <resources>
+        <image name="detial.png" width="30" height="30"/>
+    </resources>
 </document>
