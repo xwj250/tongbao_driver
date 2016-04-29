@@ -67,8 +67,13 @@
             vc.from = [NSString stringWithFormat:@"%@",[[dict objectForKey:@"data"] objectForKey:@"addressFrom"]];
             vc.startTime = [NSString stringWithFormat:@"%@",[[dict objectForKey:@"data"] objectForKey:@"time"]];
             vc.endTime = [NSString stringWithFormat:@"%@",[[dict objectForKey:@"data"] objectForKey:@"loadTime"]];
-            vc.type = [NSString stringWithFormat:@"%@",[[dict objectForKey:@"data"] objectForKey:@"goodsType"]];
-            vc.detail = [NSString stringWithFormat:@"%@",[[dict objectForKey:@"data"] objectForKey:@"goodsWeight"]];
+            
+//            vc.type = [NSString stringWithFormat:@"%@",[[dict objectForKey:@"data"] objectForKey:@"truckTypes"]];
+            
+            NSArray *types = [[dict objectForKey:@"data"] objectForKey:@"truckTypes"];
+            vc.type = [types componentsJoinedByString:@","];
+            
+            vc.detail = [NSString stringWithFormat:@"%@",[[dict objectForKey:@"data"] objectForKey:@"goodsType"]];
 
             switch (_type) {
                 case 1://历史订单详情

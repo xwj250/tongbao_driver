@@ -7,6 +7,9 @@
 //
 
 #import "Order_detials.h"
+#import "getOrderService.h"
+#import "CancelOrderService.h"
+#import "DeleteOrderService.h"
 
 @interface Order_detials ()
 
@@ -32,6 +35,18 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)bottomButton:(UIButton *)sender {
+    if([sender.titleLabel.text isEqualToString:@"抢单"]){
+        getOrderService *s = [[getOrderService alloc] init];
+        [s getOrderWithId:[_Id intValue]];
+    }else if([sender.titleLabel.text isEqualToString:@"取消"]){
+        CancelOrderService *s = [[CancelOrderService alloc] init];
+        [s cancelOrderWithId:[_Id intValue]];
+    }else if([sender.titleLabel.text isEqualToString:@"删除"]){
+        DeleteOrderService *s = [[DeleteOrderService alloc] init];
+        [s deleteOrderWithId:[_Id intValue]];
+    }
 }
 
 - (IBAction)backButton:(UIBarButtonItem *)sender {

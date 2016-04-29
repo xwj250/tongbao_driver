@@ -8,6 +8,7 @@
 
 #import "Mission.h"
 #import "First.h"
+#import "OrderDetailService.h"
 
 @interface Mission ()
 @end
@@ -43,6 +44,18 @@
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if(indexPath.row<[_array count]){
+        NSString *selected = [_array objectAtIndex:indexPath.row];
+        //        NSLog(@"select = %@",selected);
+        NSArray *infoList = [selected componentsSeparatedByString:@";"];
+        NSArray *temp = [[infoList objectAtIndex:0] componentsSeparatedByString:@"："];
+        int id = [[temp objectAtIndex:1] intValue];
+        //        NSLog(@"id = %d",id);
+        OrderDetailService *s = [[OrderDetailService alloc] init];
+        [s showDetailFromView:self ForID:id InType:2];
+    }
+}
 
 - (IBAction)backButton:(UIBarButtonItem *)sender {
     [self.navigationController popViewControllerAnimated:YES];

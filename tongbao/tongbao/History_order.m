@@ -9,6 +9,7 @@
 #import "History_order.h"
 #import "First.h"
 #import "Personal.h"
+#import "OrderDetailService.h"
 
 @interface History_order ()
 
@@ -43,6 +44,19 @@
     NSUInteger row = [indexPath row];
     cell.textLabel.text = [self.array objectAtIndex:row];
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if(indexPath.row<[_array count]){
+        NSString *selected = [_array objectAtIndex:indexPath.row];
+
+        NSArray *infoList = [selected componentsSeparatedByString:@";"];
+        NSArray *temp = [[infoList objectAtIndex:0] componentsSeparatedByString:@"："];
+        int id = [[temp objectAtIndex:1] intValue];
+
+        OrderDetailService *s = [[OrderDetailService alloc] init];
+        [s showDetailFromView:self ForID:id InType:1];
+    }
 }
 
 - (IBAction)firstTouch:(UIBarButtonItem *)sender {

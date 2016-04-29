@@ -13,4 +13,14 @@
 @property (weak, nonatomic) IBOutlet UIView *manView;
 @property (weak, nonatomic) IBOutlet UIView *carView;
 
+@property (weak, nonatomic) IBOutlet UILabel *manIsOkLabel;
+@property (weak, nonatomic) IBOutlet UITextField *manNameLabel;
+@property (weak, nonatomic) IBOutlet UITextField *manTruckNumTextField;
+@property (weak, nonatomic) IBOutlet UITextField *manLicenseNumTextField;
+
+@property (weak, nonatomic) IBOutlet UILabel *carIsOkLabel;
+@property (weak, nonatomic) IBOutlet UITextField *carTruckNumTextField;
+
+
+
 @end

@@ -24,6 +24,22 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)driverHeadButton:(UIButton *)sender {
+    
+}
+
+- (IBAction)driverLicenseButton:(UIButton *)sender {
+    
+}
+
+- (IBAction)carHeadButton:(UIButton *)sender {
+    
+}
+
+- (IBAction)carLicenseButton:(UIButton *)sender {
+    
+}
+
 - (IBAction)segmentedControlClicked:(UISegmentedControl *)sender {
     switch (_segmentedControl.selectedSegmentIndex) {
         case 0:
@@ -40,10 +56,9 @@
 }
 
 
-
-
-
-
+- (IBAction)tijiaoButton:(UIButton *)sender {
+    
+}
 
 
 - (IBAction)backButton:(UIBarButtonItem *)sender {

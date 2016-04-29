@@ -8,7 +8,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Authentication">
             <connections>
+                <outlet property="carIsOkLabel" destination="Viv-kv-Is9" id="NVn-x5-Iwe"/>
+                <outlet property="carTruckNumTextField" destination="xzH-gy-bXD" id="iiY-xt-NK8"/>
                 <outlet property="carView" destination="eEz-U6-6XX" id="h8J-7A-O65"/>
+                <outlet property="manIsOkLabel" destination="PKG-AN-6gL" id="lUr-D7-XpJ"/>
+                <outlet property="manLicenseNumTextField" destination="G7M-gm-iAW" id="kEB-WG-U8o"/>
+                <outlet property="manNameLabel" destination="qWo-Fa-NVC" id="ebW-hM-mDZ"/>
+                <outlet property="manTruckNumTextField" destination="E9h-SX-0im" id="QdN-q5-NIw"/>
                 <outlet property="manView" destination="wmV-LK-9vj" id="e7i-Ji-Y1P"/>
                 <outlet property="segmentedControl" destination="4Rf-cR-4yF" id="DRO-NY-mHJ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -112,6 +118,9 @@
                             <state key="normal" title="驾驶人头像">
                                 <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                             </state>
+                            <connections>
+                                <action selector="driverHeadButton:" destination="-1" eventType="touchUpInside" id="aAH-xi-Gdj"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="84x-Yf-mm0" userLabel="driverLicenseButton">
                             <rect key="frame" x="130" y="296" width="99" height="35"/>
@@ -123,6 +132,9 @@
                             <state key="normal" title="驾驶证">
                                 <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                             </state>
+                            <connections>
+                                <action selector="driverLicenseButton:" destination="-1" eventType="touchUpInside" id="tR4-h1-MXx"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -194,6 +206,9 @@
                             <state key="normal" title="车头照">
                                 <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                             </state>
+                            <connections>
+                                <action selector="carHeadButton:" destination="-1" eventType="touchUpInside" id="coG-GV-NNM"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ie1-79-9Bh" userLabel="carLicenseButton">
                             <rect key="frame" x="130" y="206" width="99" height="35"/>
@@ -206,6 +221,9 @@
                             <state key="normal" title="行驶证">
                                 <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                             </state>
+                            <connections>
+                                <action selector="carLicenseButton:" destination="-1" eventType="touchUpInside" id="nlp-z9-beg"/>
+                            </connections>
                         </button>
                     </subviews>
                     <constraints>
@@ -241,6 +259,9 @@
                             <exclude reference="tBx-t7-U6G"/>
                         </mask>
                     </variation>
+                    <connections>
+                        <action selector="tijiaoButton:" destination="-1" eventType="touchUpInside" id="L8o-82-qD3"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

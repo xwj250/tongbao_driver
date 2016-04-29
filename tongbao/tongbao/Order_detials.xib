@@ -54,6 +54,9 @@
                     <state key="normal">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="bottomButton:" destination="-1" eventType="touchUpInside" id="BGT-Qd-UVC"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="订单号:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNC-sR-gws">
                     <rect key="frame" x="18" y="95" width="95" height="25"/>
@@ -125,9 +128,9 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WxO-ik-wUp" userLabel="typeLabel">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WxO-ik-wUp" userLabel="typeLabel">
                     <rect key="frame" x="150" y="393" width="256" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -150,6 +153,7 @@
                 <constraint firstItem="WxO-ik-wUp" firstAttribute="trailing" secondItem="SyG-My-ssj" secondAttribute="trailing" id="1XR-Wk-KU6"/>
                 <constraint firstItem="4ek-xk-Kpe" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="1XZ-mt-sfa"/>
                 <constraint firstItem="5Pm-Fg-VBM" firstAttribute="leading" secondItem="Geg-iq-qAX" secondAttribute="leading" id="1jM-xN-Mp9"/>
+                <constraint firstItem="WxO-ik-wUp" firstAttribute="top" secondItem="Gfe-vy-1P0" secondAttribute="top" id="2hh-pQ-94r"/>
                 <constraint firstItem="Geg-iq-qAX" firstAttribute="top" secondItem="0iL-WH-CpU" secondAttribute="bottom" constant="10" id="2u9-lO-B3U"/>
                 <constraint firstItem="Geg-iq-qAX" firstAttribute="leading" secondItem="0iL-WH-CpU" secondAttribute="leading" id="73n-hh-Jgg"/>
                 <constraint firstItem="sd2-RK-9O2" firstAttribute="centerX" secondItem="4ek-xk-Kpe" secondAttribute="centerX" id="8ui-4i-YOV"/>
@@ -171,7 +175,6 @@
                 <constraint firstItem="NPp-Ce-3V9" firstAttribute="baseline" secondItem="uPF-4V-wsA" secondAttribute="baseline" id="RYH-O6-JI1"/>
                 <constraint firstItem="aUj-N0-2DX" firstAttribute="baseline" secondItem="5Pm-Fg-VBM" secondAttribute="baseline" id="V1c-iC-aTi"/>
                 <constraint firstItem="WxO-ik-wUp" firstAttribute="leading" secondItem="SyG-My-ssj" secondAttribute="leading" id="XX4-fm-Oo1"/>
-                <constraint firstItem="WxO-ik-wUp" firstAttribute="baseline" secondItem="Gfe-vy-1P0" secondAttribute="baseline" id="Ydz-g1-fHV"/>
                 <constraint firstItem="uPF-4V-wsA" firstAttribute="top" secondItem="5Pm-Fg-VBM" secondAttribute="bottom" constant="10" id="Zr2-k1-9lQ"/>
                 <constraint firstItem="WNC-sR-gws" firstAttribute="top" secondItem="4ek-xk-Kpe" secondAttribute="bottom" constant="30" id="dr7-Hb-Uzl"/>
                 <constraint firstItem="SyG-My-ssj" firstAttribute="leading" secondItem="NPp-Ce-3V9" secondAttribute="leading" id="eh4-a1-jWO"/>
