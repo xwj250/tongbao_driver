@@ -16,6 +16,6 @@
 @property(nonatomic,retain) NSString *toAddress;
 @property(nonatomic,retain) NSMutableArray *array;
 
-- (NSArray*) showAllOrdersForView:(UIViewController*) view From:(NSString*) fromAddress To:(NSString*) toAddress;
+- (NSMutableArray*) showAllOrdersForView:(UIViewController*) view From:(NSString*) fromAddress To:(NSString*) toAddress;
 
 @end

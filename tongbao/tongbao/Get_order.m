@@ -8,7 +8,8 @@
 
 #import "Get_order.h"
 #import "ShowAllOrdersService.h"
-
+#import "ShowOrdersService.h"
+#import "OrderDetailService.h"
 @interface Get_order ()
 
 @end
@@ -19,7 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    _array = [[NSArray alloc] initWithObjects:@"1",@"2", nil];
+//    _array = [[NSArray alloc] initWithObjects:@"1",@"2", nil];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,9 +49,22 @@
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if(indexPath.row<[_array count]){
+        NSString *selected = [_array objectAtIndex:indexPath.row];
+//        NSLog(@"select = %@",selected);
+        NSArray *infoList = [selected componentsSeparatedByString:@";"];
+        NSArray *temp = [[infoList objectAtIndex:0] componentsSeparatedByString:@"："];
+        int id = [[temp objectAtIndex:1] intValue];
+//        NSLog(@"id = %d",id);
+        OrderDetailService *s = [[OrderDetailService alloc] init];
+        [s showDetailFromView:self ForID:id InType:3];
+    }
+}
+
 - (IBAction)searchButton:(UIButton *)sender {
-    ShowAllOrdersService *service = [[ShowAllOrdersService alloc] init];
-    self.array = [service showAllOrdersForView:self From:_fromAddress.text To:_toAddress.text];
+    ShowOrdersService *service = [[ShowOrdersService alloc] init];
+    self.array = [service showOrdersFrom:_fromAddress.text To:_toAddress.text];
     [_tableView reloadData];
 }
 

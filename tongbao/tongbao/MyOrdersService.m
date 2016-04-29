@@ -56,15 +56,15 @@
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:self.receiveData options:NSJSONReadingMutableLeaves error:nil];
     NSLog(@"result = %@",[dict objectForKey:@"result"]);
     
-//    for(id key in dict) {
-//        NSLog(@"key :%@  value :%@", key, [dict objectForKey:key]);
-//    }
+    for(id key in dict) {
+        NSLog(@"key :%@  value :%@", key, [dict objectForKey:key]);
+    }
     
     NSMutableArray *anyItems = [[NSMutableArray alloc] initWithCapacity:0];
     
     if([[dict objectForKey:@"result"] intValue] == 1){
         @try{
-        for(NSDictionary *s in [[dict objectForKey:@"data"] allValues]){
+        for(NSDictionary *s in [dict objectForKey:@"data"]){
             NSString *item = [NSString stringWithFormat:@"订单编号：%@;下单时间：%@;开始地点：%@;终止地点：%@;金额：%@;车型：%@;起点联系人姓名：%@;起点联系人号码：%@;终点联系人姓名：%@;终点联系人号码：%@;装车时间：%@",[s objectForKey:@"id"],[s objectForKey:@"time"],[s objectForKey:@"addressFrom"],[s objectForKey:@"addressTo"],[s objectForKey:@"money"],[s objectForKey:@"truckTypes"],[s objectForKey:@"fromContactName"],[s objectForKey:@"fromContactPhone"],[s objectForKey:@"toContactName"],[s objectForKey:@"toContactPhone"],[s objectForKey:@"loadTime"]];
            [anyItems addObject:item];
         }
@@ -76,16 +76,14 @@
         
     switch (_type) {
         case 1:{
-                //正在进行的订单，及任务界面
-                NSLog(@"跳转任务界面。。。");
+//                NSLog(@"跳转任务界面。。。");
                 Mission *vc = [[Mission alloc] init];
                 vc.array = anyItems;
                 [myView.navigationController pushViewController:vc animated:YES];
                 break;
         }
         case 2:{
-                //已完成的订单，及订单界面
-                NSLog(@"跳转订单界面。。。");
+//                NSLog(@"跳转订单界面。。。");
                 History_order *vc = [[History_order alloc] init];
                 vc.array = anyItems;
                 [myView.navigationController pushViewController:vc animated:YES];

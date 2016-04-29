@@ -24,6 +24,8 @@
     myView = view;
     _fromAddress = fromAddress;
     _toAddress = toAddress;
+    
+    _array = [[ NSMutableArray alloc] init];
     AppDelegate *delegate = (AppDelegate*) [[UIApplication sharedApplication] delegate];
     NSString *URLString = @"http://120.27.112.9:8080/tongbao/driver/auth/showAllOrders";
     NSURL *URL = [NSURL URLWithString:[URLString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
@@ -36,10 +38,12 @@
     NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:URLRequset delegate:self];
     [connection start];
     NSLog(@"请求已经发送");
-    if(_array == 0){
-        NSLog(@"array为空");
-    }
-    for(id temp in _array){
+//    if(_array == 0){
+//        NSLog(@"array为空");
+//    }else{
+//        NSLog(@"array 不为空");
+//    }
+    for (id temp in _array) {
         NSLog(@"%@",temp);
     }
     return _array;
@@ -66,24 +70,26 @@
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:self.receiveData options:NSJSONReadingMutableLeaves error:nil];
     NSLog(@"result = %@",[dict objectForKey:@"result"]);
     
-    for(id key in dict) {
-        NSLog(@"key :%@  value :%@", key, [dict objectForKey:key]);
-    }
+//    for(id key in dict) {
+//        NSLog(@"key :%@  value :%@", key, [dict objectForKey:key]);
+//    }
     
 //    NSMutableArray *anyItems = [[NSMutableArray alloc] initWithCapacity:0];
     _array = [[NSMutableArray alloc] initWithCapacity:0];
     
     if([[dict objectForKey:@"result"] intValue] == 1){
         @try{
-            for(NSDictionary *s in [[dict objectForKey:@"data"] allValues]){
+            for(NSDictionary *s in [dict objectForKey:@"data"]){
                 NSString *item = [NSString stringWithFormat:@"订单编号：%@;下单时间：%@;开始地点：%@;终止地点：%@;金额：%@;车型：%@;起点联系人姓名：%@;起点联系人号码：%@;终点联系人姓名：%@;终点联系人号码：%@;装车时间：%@",[s objectForKey:@"id"],[s objectForKey:@"time"],[s objectForKey:@"addressFrom"],[s objectForKey:@"addressTo"],[s objectForKey:@"money"],[s objectForKey:@"truckTypes"],[s objectForKey:@"fromContactName"],[s objectForKey:@"fromContactPhone"],[s objectForKey:@"toContactName"],[s objectForKey:@"toContactPhone"],[s objectForKey:@"loadTime"]];
                 [_array addObject:item];
-                NSLog(@"item = %@",item);
+//                NSLog(@"item = %@",item);
             }
             
             
         }@catch(NSException *e){
-            _array = [[NSMutableArray alloc] initWithObjects:@"没有订单", @"1",@"2",nil];
+            UIAlertView *myAlertView;
+            myAlertView = [[UIAlertView alloc]initWithTitle:@"结果" message:@"没有订单" delegate:self cancelButtonTitle:@"ok" otherButtonTitles:nil];
+            [myAlertView show];
         }
         
         

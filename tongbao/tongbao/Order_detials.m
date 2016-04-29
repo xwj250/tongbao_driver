@@ -16,6 +16,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.idLabel.text = _Id;
+    self.toLabel.text = _to;
+    self.fromLabel.text = _from;
+    self.startTimeLabel.text = _startTime;
+    self.endTimeLabel.text = _endTime;
+    self.typeLabel.text = _type;
+    self.detailLabel.text = _detail;
+    [self.bottomButton setTitle:_buttonName forState:UIControlStateNormal];
+    
+    
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -24,14 +34,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)backButton:(UIBarButtonItem *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
-*/
 
 @end
