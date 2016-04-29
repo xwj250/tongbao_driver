@@ -51,10 +51,6 @@
         [myAlertView show];
     }
     
-//        for(id temp in _array){
-//            NSLog(@"%@",temp);
-//        }
-    
     return _array;
 }
 @end

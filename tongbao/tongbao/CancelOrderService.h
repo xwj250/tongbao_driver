@@ -9,9 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface CancelOrderService : NSObject
-@property(nonatomic,retain) NSMutableData *receiveData;
-@property(nonatomic,assign)int dataPackSerialNo;
+
 @property(nonatomic,assign) int type;
 
--(void) cancelOrderWithId:(int) Id;
+-(int) cancelOrderWithId:(int) Id;
 @end

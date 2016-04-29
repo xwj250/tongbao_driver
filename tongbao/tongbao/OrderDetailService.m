@@ -55,7 +55,7 @@
     
     NSDictionary *dict=[NSJSONSerialization JSONObjectWithData:self.receiveData options:NSJSONReadingMutableLeaves error:nil];
     
-//    NSLog(@"data=%@",[dict objectForKey:@"data"]);
+    NSLog(@"result=%@",[dict objectForKey:@"result"]);
     
     if([[dict objectForKey:@"result"] intValue]==1){
         
@@ -67,8 +67,6 @@
             vc.from = [NSString stringWithFormat:@"%@",[[dict objectForKey:@"data"] objectForKey:@"addressFrom"]];
             vc.startTime = [NSString stringWithFormat:@"%@",[[dict objectForKey:@"data"] objectForKey:@"time"]];
             vc.endTime = [NSString stringWithFormat:@"%@",[[dict objectForKey:@"data"] objectForKey:@"loadTime"]];
-            
-//            vc.type = [NSString stringWithFormat:@"%@",[[dict objectForKey:@"data"] objectForKey:@"truckTypes"]];
             
             NSArray *types = [[dict objectForKey:@"data"] objectForKey:@"truckTypes"];
             vc.type = [types componentsJoinedByString:@","];
@@ -97,8 +95,8 @@
         }
         
     }
-    else if([[dict objectForKey:@"result"] intValue] ==0){
-        NSLog(@"wrong");
+    else if([[dict objectForKey:@"result"] intValue] == 0){
+//        NSLog(@"wrong");
         UIAlertView *myAlertView;
         myAlertView = [[UIAlertView alloc]initWithTitle:@"结果" message:@"服务器异常" delegate:self cancelButtonTitle:@"ok" otherButtonTitles:nil];
         [myAlertView show];

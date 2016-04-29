@@ -37,15 +37,34 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)bottomButton:(UIButton *)sender {
+    int result;
+    UIAlertView *myAlertView;
+
     if([sender.titleLabel.text isEqualToString:@"抢单"]){
         getOrderService *s = [[getOrderService alloc] init];
-        [s getOrderWithId:[_Id intValue]];
+        result = [s getOrderWithId:[_Id intValue]];
+        
     }else if([sender.titleLabel.text isEqualToString:@"取消"]){
         CancelOrderService *s = [[CancelOrderService alloc] init];
-        [s cancelOrderWithId:[_Id intValue]];
+        result = [s cancelOrderWithId:[_Id intValue]];
+        
+        
     }else if([sender.titleLabel.text isEqualToString:@"删除"]){
         DeleteOrderService *s = [[DeleteOrderService alloc] init];
-        [s deleteOrderWithId:[_Id intValue]];
+        result = [s deleteOrderWithId:[_Id intValue]];
+        
+    }
+    switch (result) {
+        case 0:
+            myAlertView = [[UIAlertView alloc]initWithTitle:@"结果" message:[NSString stringWithFormat:@"%@失败",_buttonName] delegate:self cancelButtonTitle:@"ok" otherButtonTitles:nil];
+            [myAlertView show];
+            break;
+        case 1:
+            myAlertView = [[UIAlertView alloc]initWithTitle:@"结果" message:[NSString stringWithFormat:@"%@成功",_buttonName] delegate:self cancelButtonTitle:@"ok" otherButtonTitles:nil];
+            [myAlertView show];
+            break;
+        default:
+            break;
     }
 }
 

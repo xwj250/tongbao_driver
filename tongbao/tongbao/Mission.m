@@ -9,6 +9,7 @@
 #import "Mission.h"
 #import "First.h"
 #import "OrderDetailService.h"
+#import "MyOrdersService.h"
 
 @interface Mission ()
 @end
@@ -17,6 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    MyOrdersService *s = [[MyOrdersService alloc] init];
+    _array = [s showMyOrdersInType:1];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -61,7 +64,11 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-
+- (void)viewWillAppear:(BOOL)animated {
+    MyOrdersService *s = [[MyOrdersService alloc] init];
+    _array = [s showMyOrdersInType:1];
+    [_tableView reloadData];
+}
 
 
 @end

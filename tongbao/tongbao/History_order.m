@@ -10,6 +10,7 @@
 #import "First.h"
 #import "Personal.h"
 #import "OrderDetailService.h"
+#import "MyOrdersService.h"
 
 @interface History_order ()
 
@@ -19,11 +20,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    MyOrdersService *s = [[MyOrdersService alloc] init];
+    _array = [s showMyOrdersInType:2];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -69,5 +73,10 @@
     [self.navigationController pushViewController:personal animated:YES];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    MyOrdersService *s = [[MyOrdersService alloc] init];
+    _array = [s showMyOrdersInType:2];
+    [_tableView reloadData];
+}
 
 @end

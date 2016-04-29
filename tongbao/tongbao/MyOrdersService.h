@@ -9,11 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface MyOrdersService : NSObject
-@property(nonatomic,retain) NSMutableData *receiveData;
-@property(nonatomic,assign) int dataPackSerialNo;
-@property(nonatomic,retain) UIViewController *myView;
+@property(nonatomic,retain) NSMutableArray *array;
 @property(nonatomic,assign) int type;
 
-- (void) showMyOrdersForView:(UIViewController*) view type:(int)type;
+- (NSMutableArray*) showMyOrdersInType:(int)type;
 
 @end

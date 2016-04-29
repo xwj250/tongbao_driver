@@ -9,9 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface DeleteOrderService : NSObject
-@property(nonatomic,retain) NSMutableData *receiveData;
-@property(nonatomic,assign)int dataPackSerialNo;
+
 @property(nonatomic,assign) int type;
 
--(void) deleteOrderWithId:(int) Id;
+-(int) deleteOrderWithId:(int) Id;
 @end

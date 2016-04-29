@@ -19,14 +19,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-//    _array = [[NSArray alloc] initWithObjects:@"1",@"2", nil];
+    ShowOrdersService *service = [[ShowOrdersService alloc] init];
+    self.array = [service showOrdersFrom:_fromAddress.text To:_toAddress.text];
     
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -55,10 +54,10 @@
 //        NSLog(@"select = %@",selected);
         NSArray *infoList = [selected componentsSeparatedByString:@";"];
         NSArray *temp = [[infoList objectAtIndex:0] componentsSeparatedByString:@"："];
-        int id = [[temp objectAtIndex:1] intValue];
-//        NSLog(@"id = %d",id);
+        int Id = [[temp objectAtIndex:1] intValue];
+        NSLog(@"id = %d",Id);
         OrderDetailService *s = [[OrderDetailService alloc] init];
-        [s showDetailFromView:self ForID:id InType:3];
+        [s showDetailFromView:self ForID:Id InType:3];
     }
 }
 
@@ -73,6 +72,11 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    ShowOrdersService *service = [[ShowOrdersService alloc] init];
+    self.array = [service showOrdersFrom:_fromAddress.text To:_toAddress.text];
+    [_tableView reloadData];
+}
 
 
 @end

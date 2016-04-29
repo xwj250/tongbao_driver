@@ -9,10 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface getOrderService : NSObject
-@property(nonatomic,retain) NSMutableData *receiveData;
-@property(nonatomic,assign)int dataPackSerialNo;
+
 @property(nonatomic,assign) int type;
 
--(void) getOrderWithId:(int) Id;
+-(int) getOrderWithId:(int) Id;
 
 @end
