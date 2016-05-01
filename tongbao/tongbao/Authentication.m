@@ -16,7 +16,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    _manIsOkLabel.text = _authState;
+    _carIsOkLabel.text = _authState;
+    
+    if([_authState isEqualToString:@"验证成功"]|| [_authState isEqualToString:@"正在验证"]){
+        _tijiaoButton.userInteractionEnabled = NO;
+        _tijiaoButton.alpha = 0.4;
+    }
 }
 
 - (void)didReceiveMemoryWarning {

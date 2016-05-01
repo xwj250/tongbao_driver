@@ -21,6 +21,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *carIsOkLabel;
 @property (weak, nonatomic) IBOutlet UITextField *carTruckNumTextField;
 
+@property (weak, nonatomic) IBOutlet UIButton *tijiaoButton;
 
+@property (strong, nonatomic) NSString *authState;
 
 @end

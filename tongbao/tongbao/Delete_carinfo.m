@@ -8,6 +8,7 @@
 
 #import "Delete_carinfo.h"
 #import "Deletecar_service.h"
+#import "Authentication.h"
 
 @interface Delete_carinfo ()
 
@@ -78,5 +79,22 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (IBAction)authButton:(UIButton *)sender {
+    Authentication *vc = [[Authentication alloc] init];
+    if([self.b isEqualToString:@"0"]){
+        vc.authState=@"未验证";
+    }
+    
+    else if ([self.b isEqualToString:@"1"]){
+        vc.authState=@"正在验证";
+    }
+    else if ([self.b isEqualToString:@"2"]){
+        vc.authState=@"验证成功";
+    }
+    else if ([self.b isEqualToString:@"3"]){
+        vc.authState=@"验证失败";
+    }
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 @end
