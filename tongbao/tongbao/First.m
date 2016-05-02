@@ -88,8 +88,8 @@
 }
 
 - (IBAction)click8:(UIButton *)sender {
-    Authentication *vc = [[Authentication alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+//    Authentication *vc = [[Authentication alloc] init];
+//    [self.navigationController pushViewController:vc animated:YES];
 }
 
 

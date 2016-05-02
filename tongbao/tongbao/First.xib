@@ -190,7 +190,6 @@
         </view>
     </objects>
     <resources>
-        <image name="authen.png" width="100" height="100"/>
         <image name="carmanage.png" width="100" height="100"/>
         <image name="getorder.png" width="100" height="100"/>
         <image name="home2.png" width="35" height="42"/>
