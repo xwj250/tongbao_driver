@@ -15,14 +15,24 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *manIsOkLabel;
 @property (weak, nonatomic) IBOutlet UITextField *manNameLabel;
-@property (weak, nonatomic) IBOutlet UITextField *manTruckNumTextField;
-@property (weak, nonatomic) IBOutlet UITextField *manLicenseNumTextField;
+
+@property (strong, nonatomic) IBOutlet UITextField *manTruckNumTextField;
+@property (strong, nonatomic) IBOutlet UITextField *manLicenseNumTextField;
+@property (strong, nonatomic) IBOutlet UITextField *manNameTextField;
 
 @property (weak, nonatomic) IBOutlet UILabel *carIsOkLabel;
-@property (weak, nonatomic) IBOutlet UITextField *carTruckNumTextField;
+@property (strong, nonatomic) IBOutlet UITextField *carTruckNumTextField;
 
 @property (weak, nonatomic) IBOutlet UIButton *tijiaoButton;
 
 @property (strong, nonatomic) NSString *authState;
+@property (strong, nonatomic) NSString *currentUrl;
+@property (nonatomic, assign) int currentPicNum;
+@property (strong, nonatomic) NSString *driverHeadPicUrl;
+@property (strong, nonatomic) NSString *driverLicensePicUrl;
+@property (strong, nonatomic) NSString *carHeadPicUrl;
+@property (strong, nonatomic) NSString *carLicensePicUrl;
+
+
 
 @end

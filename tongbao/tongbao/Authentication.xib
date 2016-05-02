@@ -14,6 +14,7 @@
                 <outlet property="manIsOkLabel" destination="PKG-AN-6gL" id="lUr-D7-XpJ"/>
                 <outlet property="manLicenseNumTextField" destination="G7M-gm-iAW" id="kEB-WG-U8o"/>
                 <outlet property="manNameLabel" destination="qWo-Fa-NVC" id="ebW-hM-mDZ"/>
+                <outlet property="manNameTextField" destination="qWo-Fa-NVC" id="tkf-pu-FNs"/>
                 <outlet property="manTruckNumTextField" destination="E9h-SX-0im" id="QdN-q5-NIw"/>
                 <outlet property="manView" destination="wmV-LK-9vj" id="e7i-Ji-Y1P"/>
                 <outlet property="segmentedControl" destination="4Rf-cR-4yF" id="DRO-NY-mHJ"/>

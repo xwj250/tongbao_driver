@@ -10,5 +10,5 @@
 
 @interface carAuthenticationService : NSObject
 
--(int) setTruckAuthInfoWithTruckNum:(NSString*) truckNum TruckHeadPicUrl:(NSString*) truckHeadPicUrl DriverLiscensePicUrl:(NSString*)driveLicensePicUrl;
+-(int) setTruckAuthInfoWithTruckNum:(NSString*) truckNum TruckHeadPicUrl:(NSString*) truckHeadPicUrl CarLiscensePicUrl:(NSString*)carLicensePicUrl;
 @end
