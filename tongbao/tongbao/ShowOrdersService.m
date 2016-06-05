@@ -35,22 +35,16 @@
             for(NSDictionary *s in [dict objectForKey:@"data"]){
                 NSString *item = [NSString stringWithFormat:@"订单编号：%@;下单时间：%@;开始地点：%@;终止地点：%@;金额：%@;车型：%@;起点联系人姓名：%@;起点联系人号码：%@;终点联系人姓名：%@;终点联系人号码：%@;装车时间：%@",[s objectForKey:@"id"],[s objectForKey:@"time"],[s objectForKey:@"addressFrom"],[s objectForKey:@"addressTo"],[s objectForKey:@"money"],[s objectForKey:@"truckTypes"],[s objectForKey:@"fromContactName"],[s objectForKey:@"fromContactPhone"],[s objectForKey:@"toContactName"],[s objectForKey:@"toContactPhone"],[s objectForKey:@"loadTime"]];
                 [_array addObject:item];
-                //NSLog(@"item = %@",item);
             }
-            
-            
         }@catch(NSException *e){
             _array = [[NSMutableArray alloc] initWithObjects:@"没有订单",nil];
         }
-        
-        
     }else if([[dict objectForKey:@"result"] intValue] == 0){
         NSLog(@"wrong");
         UIAlertView *myAlertView;
         myAlertView = [[UIAlertView alloc]initWithTitle:@"结果" message:@"服务器异常" delegate:self cancelButtonTitle:@"ok" otherButtonTitles:nil];
         [myAlertView show];
     }
-    
     return _array;
 }
 @end

@@ -78,5 +78,9 @@
     [_tableView reloadData];
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    [_toAddress resignFirstResponder];
+    [_fromAddress resignFirstResponder];
+}
 
 @end
